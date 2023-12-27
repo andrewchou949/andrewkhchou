@@ -1,0 +1,55 @@
+.storySection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.5rem;
+  color: #000000;
+  text-align: left;
+}
+
+.myStoryTitle {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: left;
+    color: rgb(0, 0, 0);
+  }
+
+.storyContent {
+  column-count: 2;
+  column-gap: 2rem;
+  max-width: 100%;
+  margin: auto;
+}
+
+.storyContent h2 {
+  font-size: 1.35rem;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  
+}
+
+.storyContent p {
+  font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .storyContent {
+    column-count: 1;
+  }
+
+  #story h1 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  #story h2 {
+    font-size: 1rem;
+  }
+  #story p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,72 @@
+.contact-form {
+  max-width: 100%; /* Full width on smaller screens */
+  min-width: 100%;
+  margin: 0 auto; /* Center the form */
+  padding: 1rem; /* Add some padding around the form elements */
+  background: #fff; /* Set a white background for the form */
+  border-radius: 8px; /* Slightly round the corners of the form */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.form-input,
+.form-textarea {
+  width: 100%; /* Full width */
+  padding: 0.75rem; /* Padding inside the inputs */
+  margin-bottom: 1rem; /* Space between inputs */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Slightly rounded borders on inputs */
+  box-sizing: border-box; /* Border-box sizing */
+}
+
+.form-textarea {
+  min-height: 150px; /* Minimum height for the textarea */
+  resize: vertical; /* Allow only vertical resizing */
+}
+
+.error-message {
+  color: #d32f2f; /* Red color for error messages */
+  font-size: 0.875rem; /* Smaller font size for error messages */
+  margin-bottom: 1rem; /* Space below error messages */
+}
+
+.response-message {
+  text-align: center; /* Center the response message */
+  margin-top: 1rem; /* Space above the response message */
+}
+
+.submit-button {
+  width: 100%; /* Full width */
+  padding: 1rem; /* Padding for the button */
+  border: none; /* No border */
+  border-radius: 4px; /* Slightly rounded corners for the button */
+  color: #fff; /* White text color */
+  background-color: #2c6fa2; /* Background color for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1rem; /* Set font size */
+  transition: background-color 0.3s ease; /* Transition for background color */
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: #3b3b3b; /* Darker background color on hover/focus */
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-form {
+    padding: 1rem 5%; /* Adjust the padding to be responsive */
+  }
+  
+  .form-input,
+  .form-textarea {
+    /* Ensures padding does not cause the inputs to exceed the width of their container */
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.65rem;
+  }
+  
+  .submit-button {
+    padding: 1rem; /* Consistent padding */
+    font-size: 0.65rem;
+  }
+}

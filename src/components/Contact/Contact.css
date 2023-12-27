@@ -1,0 +1,85 @@
+#contact {
+  color: black;
+}
+
+.section.contactSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Adjust the height as needed to take up the full viewport */
+  padding: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contactLeft,
+.contactBoxRight {
+  flex: 1; /* Each child will take up equal space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the start of the flex-direction */
+}
+
+.contactLeft {
+  padding-left: 20px;
+  margin-bottom: 280px;
+}
+
+.contactLeft h1 {
+  margin-bottom: 2rem;
+}
+
+.contactBoxRight {
+  padding-left: 20px; /* Add padding between columns */
+}
+
+@media only screen and (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack children vertically on smaller screens */
+  }
+
+  #contact {
+    padding: 10px;
+  }
+  .contactLeft h1 {
+    font-size: 1.3rem;
+  }
+
+  .contactLeft p {
+    font-size: 0.8rem;
+  }
+
+  .contactLeft {
+    width: 100%;
+    align-items: left;
+    padding: 20px 0;
+    margin-bottom: 0;
+  }
+
+  .contactBoxRight {
+    width: 100%; /* Full width on small screens */
+    align-items: center; /* Center align the content */
+    padding: 20px 0; /* Add vertical padding */
+    margin-bottom: 0; /* Remove any bottom margin that may be causing the gap */
+  }
+
+  .contactLeft {
+    padding-left: 20px; /* Maintain some padding on the left */
+    padding-right: 20px; /* Add padding on the right for consistency */
+    margin-bottom: 0; /* Remove the bottom margin that is causing the gap */
+  }
+
+  .contactBoxRight {
+    padding-left: 20px; /* Maintain some padding on the left */
+    padding-right: 20px; /* Add padding on the right for consistency */
+  }
+}

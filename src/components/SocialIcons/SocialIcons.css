@@ -1,0 +1,36 @@
+/* SocialIcons.css */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center; /* Center the icons vertically */
+  gap: 1rem; /* Add some space between the icons */
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #446dc6; 
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+  color: #333; /* Darker color on hover/focus */
+}
+
+/* GitHub icon color, if you want a specific color for GitHub icons */
+.social-icons a.github-icon {
+  color: #333; /* GitHub icon color */
+}
+
+.social-icons a.github-icon:hover,
+.social-icons a.github-icon:focus {
+  color: #6cc644; /* GitHub green color on hover/focus */
+}
+
+
+  /* iPhone and major other phone */
+@media only screen and (max-width: 769px) {
+    .social-icons {
+        font-size: 0.8rem;
+    }
+  }

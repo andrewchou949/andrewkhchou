@@ -1,0 +1,67 @@
+#about h1, #about h2 {
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+  }
+
+.aboutTitle {
+  font-size: 1.8rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.5rem;
+  color: #000000;
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+}
+
+.aboutContent {
+  max-width: 50%;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.imageContent {
+  max-width: 50%;
+  padding-left: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContent img{
+  max-width: 85%;
+  height: auto;
+}
+
+
+  /* iPhone and major other phone */
+  @media only screen and (max-width: 769px) {
+    #about h1 {
+      font-size: 1.3rem;
+    }
+    #about p {
+      font-size: 0.8rem;
+    }
+    .aboutSection {
+      flex-direction: column; /* Stack the content vertically on small screens */
+    }
+    /* This guy adjust the column directly */
+    .aboutContent, .imageContent {
+      max-width: 100%; /* Allow the content to fill the available space */
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+    .imageContent img {
+      max-width: 100%; /* Ensure the image is not larger than the container */
+    }
+  }

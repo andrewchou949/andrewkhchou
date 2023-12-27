@@ -1,0 +1,63 @@
+header {
+    background: transparent; /* Example background color */
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: auto;
+    z-index: 1000;
+  }
+
+  body, h1, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Aligns items horizontally */
+    align-items: center; /* Aligns items vertically */
+  }
+  
+  nav li {
+    padding: 0 1rem;
+  }
+  
+  nav a {
+    color: #2c6fa2;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 0.25rem;
+    position: relative;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  nav a:hover{
+    color: #3d0fe2;
+  }
+  
+  nav a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: currentColor;
+    transition: background-color 0.3s ease;
+  }
+
+/* iPad */
+@media only screen and (max-width: 767px) {
+  nav a {
+    font-size: 0.8rem;
+  }
+
+  nav li {
+    padding: 0 0.5rem;
+  }
+}

@@ -1,0 +1,142 @@
+/* Container for education details and image */
+.educationSkillsSection {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: flex-start; /* Align children to the start of the container vertically */
+    width: 100%; /* Full width of the container */
+    max-width: auto; /* Maximum width, adjust as needed */
+    margin: auto; /* Center the section on the page */
+    box-sizing: border-box; /* Include padding and borders in the element's size */
+    height: auto;
+    padding: 2.5rem;
+    color: black;
+  }
+  
+  .educationColumn h1 {
+    font-size: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .educationColumn h2 {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    text-align: left;
+  }
+  
+  .educationColumn h3 {
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-align: left;
+    font-style: italic;
+  }
+  
+  .educationColumn p {
+    text-align: left;
+  }
+  
+  /* Row container to hold education and image side by side */
+  .row {
+    display: flex; /* Use flexbox for layout */
+    width: 100%; /* Full width of the container */
+    align-items: flex-start;
+  }
+  
+  /* Left column for education details */
+  .educationColumn {
+    width: 70%;
+    padding: 2rem; /* Add some padding around the content */
+    box-sizing: border-box; /* Include padding and borders in the element's size */
+  }
+  
+  /* Right column for the image */
+  .imageColumn {
+    width: 32%;
+    padding: 20px; /* Add some padding around the content */
+    display: flex;
+    justify-content: right;
+    box-sizing: border-box; /* Include padding and borders in the element's size */
+  }
+  
+  .imageColumn img {
+    width: 120%; /* Make image take full width of its container */
+    height: auto; /* Adjust height automatically */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+  }
+  
+  /* Style for the skills section */
+  .skillsSection {
+    width: 120%; /* Full width of the container */
+    padding: 20px; /* Add some padding around the content */
+    box-sizing: border-box; /* Include padding and borders in the element's size */
+    text-align: left;
+  }
+  
+  .skillsSection h1 {
+    font-size: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+  
+  .skillsSection h2 {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .volunteerSection {
+    width: 100%; /* Full width of the container */
+    padding: 20px; /* Add some padding around the content */
+    box-sizing: border-box; /* Include padding and borders in the element's size */
+    text-align: left;
+  }
+  
+  .volunteerSection h1 {
+    font-size: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+  
+  .volunteerSection h2 {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .volunteerSection h3 {
+    font-size: 1rem;
+    font-weight: unset;
+    text-align: right;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media only screen and (max-width: 768px) {
+    .row {
+      flex-direction: column; /* Stack children vertically on smaller screens */
+    }
+  
+    .educationColumn, .imageColumn, .skillsSection, .volunteerSection {
+      width: 100%; /* Each column should take the full width on smaller screens */
+      padding: 10px;
+    }
+
+    #education h1 {
+      font-size: 1.3rem;
+    }
+    #education h2 {
+      font-size: 1rem;
+    }
+    #education h3 {
+      font-size: 0.95rem;
+    }
+    #education p {
+      font-size: 0.8rem;
+    }
+    .imageColumn img {
+      max-width: 100%; /* Ensure the image is not larger than the container */
+    }
+  }

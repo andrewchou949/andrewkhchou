@@ -1,38 +1,63 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* No padding-top by default */
+  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Define your background image for the entire page */
 .App {
-  text-align: center;
+  background-image: url('/Users/andrewchou/Documents/react-app/my-app/src/backgroundImage/image.png'); /* Set your background image path here */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll; /* This line make the background fixed even when content is scrolled */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.section {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* iPhone and major other phone */
+@media only screen and (max-width: 769px) {
+  .App {
+    /* Adjust background size as requested */
+    background-size: fixed;
+    background-attachment: fixed; /* Changes the background to scroll with the page on smaller screens */
+  }
+
+  .section {
+    /* Apply padding and potentially other styles for smaller screens */
+    padding: 20px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* All the iPad and Computer!*/
+@media only screen and (min-width: 769px) {
+  .App {
+    /* Fixed background for larger screens */
+    background-attachment: fixed;
   }
 }
