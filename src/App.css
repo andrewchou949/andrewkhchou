@@ -28,7 +28,7 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: scroll; /* This line make the background fixed even when content is scrolled */
+  background-attachment: fixed; /* This line make the background fixed even when content is scrolled */
 }
 
 .section {
