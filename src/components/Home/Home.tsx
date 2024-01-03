@@ -80,7 +80,7 @@ const Home: React.FC<HomeProps> = ({scrollPosition}) => {
   }, [handleScroll, scrollPosition]);
 
   const [currentSkill, setCurrentSkill] = useState('');
-  const skills = ["Python", "C++", "Java", "SQLite", "Dart", "Technical Writing", "Firebase", "FlutterFlow", "Canva", " Lucid Chart"];
+  const skills = ["Python", "C++", "Java", "SQLite", "Dart", "React", "TypeScript",  "AWS Route 53", "Firebase", "FlutterFlow", "Canva", "Technical Writing", " Lucid Chart"];
   const typingSkill = useTypingEffect(skills, 175, 3000);
   
   /* For the last line (typing animation) */

@@ -33,6 +33,7 @@
 .response-message {
   text-align: center; /* Center the response message */
   margin-top: 1rem; /* Space above the response message */
+  color: green;
 }
 
 .submit-button {

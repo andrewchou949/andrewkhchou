@@ -9,7 +9,7 @@ const Project = () => {
             title: 'Personal Self Introduction Webpage', 
             description: 'Utilizing React, TypeScript, Firebase, and AWS Route 53, this personal website project is a dynamic showcase of web development and UI/UX design expertise. Experience a seamless, feature-rich user journey that highlights the integration of these cutting-edge tools.',
             demoLink: 'https://github.com/andrewchou949/andrewkhchou',
-            skills: ['TypeScript', 'Firebase', 'React', 'AWS Route 53', 'DALL-E 3']
+            skills: ['TypeScript', 'Firebase', 'React', 'AWS Route 53', 'DALL-E 3', 'React Spring Parallax', 'Responsive Design']
             },
         {
         title: 'Polyglot Go (Capstone Project: CSS 497)', 

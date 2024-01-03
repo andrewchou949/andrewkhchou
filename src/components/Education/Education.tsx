@@ -29,14 +29,18 @@ const Education = () => {
           <p>Java &nbsp;&nbsp;&nbsp;⭐️⭐️</p>
           <p>SQL &nbsp;&nbsp;&nbsp;⭐️⭐️</p>
           <p>Dart &nbsp;&nbsp;&nbsp;(Working on it) ⭐️</p>
-          <p>Javascript / HTML / CSS (Working on it) &nbsp;&nbsp;&nbsp;⭐️</p>
-          <p>Typescript (Working on it) &nbsp;&nbsp;&nbsp;⭐️</p>
+          <p>Javascript / HTML / CSS / Typescript (Working on it) &nbsp;&nbsp;&nbsp;⭐️</p>
           <h2>Frameworks/Libraries:</h2>
           <p>Flutter &nbsp;&nbsp;&nbsp;⭐️⭐️</p>
           <p>React (Working on it) &nbsp;&nbsp;&nbsp;⭐️</p>
+          <p>React Spring Parallax ⭐️⭐️</p>
+          <p>Firebase ⭐️⭐️</p>
+          <p>Testing ⭐️</p>
+          <p>Git Version Control (Github) ⭐️⭐️</p>
+          <p>Responsive Design ⭐️⭐️</p>
           <h2>Other Skills:</h2>
           <p>UI/UX: Lucid Chart, Canva &nbsp;&nbsp;&nbsp;⭐️⭐️⭐️</p>
-          <p>Soft Skills: Problem Solving, Written Communication, Teamwork, Customer Service &nbsp;&nbsp;&nbsp;⭐️⭐️</p>
+          <p>Soft Skills: Problem Solving, Written Communication, Teamwork, Customer Service &nbsp;⭐️⭐️</p>
         </div>
         <div className="volunteerSection">
           <h1>Volunteering and Community Events</h1>
