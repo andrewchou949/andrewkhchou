@@ -5,7 +5,7 @@ This is the repository for the codes of my personal self intro webpage project, 
 Check out the website here: [Visit my site](https://andrewkhchou.com)
 
 ## Description:
-●	Develop a self-introduction landing page for a polished and professional online presence.
+-	Develop a self-introduction landing page for a polished and professional online presence.
 
 ●	Initial attempt trying to immerse myself in React UI design library, TypeScript programming language while showcasing my skill in UI design, web, and frontend development.
 
