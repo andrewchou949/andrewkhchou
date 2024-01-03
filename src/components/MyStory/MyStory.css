@@ -1,3 +1,7 @@
+#story {
+  color:#E0FFFF;
+}
+
 .storySection {
   display: flex;
   flex-direction: column;
@@ -12,7 +16,6 @@
     margin-top: 0;
     margin-bottom: 1rem;
     text-align: left;
-    color: rgb(0, 0, 0);
   }
 
 .storyContent {
@@ -27,7 +30,6 @@
   margin-top: 0rem;
   margin-bottom: 0.5rem;
   text-align: left;
-  color: rgb(0, 0, 0);
   
 }
 

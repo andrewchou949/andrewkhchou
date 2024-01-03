@@ -24,7 +24,6 @@ html, body {
 
 /* Define your background image for the entire page */
 .App {
-  background-image: url('./backgroundImage/image.png'); /* Set your background image path here */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -37,7 +36,6 @@ html, body {
   align-items: flex-start;
   justify-content: center;
   padding: 0;
-  color: white;
 }
 
 /* iPhone and major other phone */

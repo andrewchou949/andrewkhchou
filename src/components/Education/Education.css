@@ -1,3 +1,7 @@
+#education {
+  color: #E0FFFF;
+}
+
 /* Container for education details and image */
 .educationSkillsSection {
     display: flex; /* Use flexbox for layout */
@@ -10,7 +14,6 @@
     box-sizing: border-box; /* Include padding and borders in the element's size */
     height: auto;
     padding: 2.5rem;
-    color: black;
   }
   
   .educationColumn h1 {
@@ -53,17 +56,18 @@
   
   /* Right column for the image */
   .imageColumn {
-    width: 32%;
+    width: 30%;
     padding: 20px; /* Add some padding around the content */
     display: flex;
-    justify-content: right;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box; /* Include padding and borders in the element's size */
   }
   
   .imageColumn img {
-    width: 120%; /* Make image take full width of its container */
+    width: 100%; /* Make image take full width of its container */
     height: auto; /* Adjust height automatically */
-    object-fit: cover; /* Ensure the image covers the area without stretching */
+    object-fit: contain; /* Ensure the image covers the area without stretching */
   }
   
   /* Style for the skills section */

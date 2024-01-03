@@ -1,76 +1,26 @@
 #projects {
-  padding: 50px 0 0 50px;
+  padding: 50px;
+  color: #E0FFFF;
 }
 
 #projects h1 {
-  color: black;
-  text-align: left; /* Center the header if desired */
-  padding: 0.5rem;
+  text-align: left;
+  margin-bottom: 2rem; /* Add some space below the header */
 }
 
-.project-row {
-  display: flex;
-  flex-direction: row; /* Side-by-side layout for larger screens */
-  justify-content: center; /* Center the content */
-  align-items: flex-start; /* Align items to the start of the flex container */
-  margin-bottom: 30px; /* Space between project rows */
-}
+/* Assuming ProjectCard has its own internal padding and margins */
 
-.project-row,
-.image-container {
-  flex: 1;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.image-container img {
-  max-width: 100%; /* Ensure the image is not wider than its container */
-  height: auto; /* Maintain the aspect ratio */
-  min-width: 500px; /* Minimum width of the image, adjust as needed */
-  min-height: 200px; /* Minimum height of the image, adjust as needed */
-  display: block; /* Removes any extra space below the image */
-  margin-top: 0; /* Align the top of the image with the top of the project box */
-  padding-right: 20px;
-  object-fit: contain;
-}
-
-/* Media query for smaller screens */
 @media only screen and (max-width: 768px) {
   #projects {
-    padding: 50px 10px; /* Adjusted to add padding similar to other sections */
+    padding: 50px 10px;
   }
-
-  .project-row {
-    flex-direction: column; /* Stack project and image vertically */
-    align-items: center; /* Center-align items horizontally */
-    margin-bottom: 30px; /* Space between project rows */
-  }
-
-  .projects-column,
-  .image-container {
-    width: 100%; /* Full width for stacking */
-    padding: 0;
-    box-sizing: border-box; /* Include padding in the width */
-    align-items: center; /* Center-align items horizontally */
-    justify-content: center; /* Center-align items vertically */
-    display: flex; /* This will apply flex properties to center the content */
-    flex-direction: column; /* Orient children vertically */
-    margin: 0 auto; /* Center the container itself */
-  }
-
-  .projects-column {
-    text-align: center; /* Center-align text for project description */
-  }
-
-  .image-container img {
-    max-width: 100%; /* Ensure the image does not exceed the width of the container */
-    min-width: 0; /* Remove the minimum width restriction */
-    height: auto; /* Maintain aspect ratio */
-    padding-right: 0; /* Remove padding that might cause issues */
+  
+  .projects-container {
+    gap: 20px; /* Smaller gap for smaller screens */
   }
 
   #projects h1 {
-    font-size: 1.3rem; /* Adjust font size for mobile */
-    padding: 0; /* Reset padding if necessary */
+    font-size: 1.5rem; /* Slightly larger font size for readability */
+    padding: 20px;
   }
 }

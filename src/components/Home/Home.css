@@ -6,40 +6,43 @@
     align-items: center;
     justify-content: center;
     padding-top: [HeaderHeight]px;
+    color: #E0FFFF;
   }
   
-  #home h1, #home h2, #home h3, #home p {
-    font-family: 'Comic Sans MS', 'Arial', sans-serif;
-    color: #000000;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  #home h1 {
-    font-size: 2rem;
-    padding-right: 28%;
-    transition: transform 1s ease-out, opacity 1s ease-out;
-  }
-  
-  #home h2 {
-    font-size: 3rem;
-    transition: transform 1s ease-out, opacity 1s ease-out;
-  }
-  
-  #home h3 {
-    font-size: 1.5rem;
-    transition: transform 1s ease-out, opacity 1s ease-out;
-  }
-  
-  #home p {
-    font-size: 1.5rem;
-    border-right: 2px solid;
-    white-space: nowrap;
-    overflow: hidden;
-    color: #2c6fa2; /* typing text color */
-    min-height: 2.1rem;
-    transition: opacity 1s ease-out;
-  }
+#home h1, #home h2, #home h3, #home p {
+  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+#home h1 {
+  font-size: 2rem;
+  padding-right: 28%;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+#home h2 {
+  font-size: 3rem;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+#home h3 {
+  font-size: 1.5rem;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+#home p {
+  font-size: 1.5rem;
+  border-right: 2px solid #FFD700;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #FFD700; /* typing text color */
+  min-height: 2.1rem;
+  transition: opacity 1s ease-out;
+  padding-right: 0;
+  display: inline-block;
+  vertical-align: middle; /* Aligns text in the middle vertically */
+}
 
   /* iPhone and major other phone */
 @media only screen and (max-width: 769px) {

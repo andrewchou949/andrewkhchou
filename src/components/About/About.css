@@ -1,5 +1,8 @@
+#about {
+  color: #E0FFFF;
+}
+
 #about h1, #about h2 {
-    color: #000000;
     font-weight: bold;
     text-align: center;
   }

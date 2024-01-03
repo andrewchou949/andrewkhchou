@@ -1,8 +1,9 @@
-import React from 'react';
+// Header.tsx
 import './Header.css';
 
-// Top part that appeared on every page!
+// Top part that appears on every page!
 const Header = () => {
+
     return (
         <header>
             <nav>
@@ -20,5 +21,3 @@ const Header = () => {
 };
 
 export default Header;
-
-

@@ -3,16 +3,14 @@ import './ProjectCard.css'; // Make sure to create a corresponding CSS file for 
 
 interface ProjectCardProps {
   title: string;
-  description1: string;
-  description2: string;
+  description: string;
   demoLink?: string; // Make demoLink optional
   skills: string[];
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
-  description1,
-  description2,
+  description,
   demoLink,
   skills,
 }) => {
@@ -23,8 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       )}
       <div className="project-content">
         <h3 className="project-title">{title}</h3>
-        <p className="project-description">{description1}</p>
-        <p className="project-description">{description2}</p>
+        <p className="project-description">{description}</p>
         <div className="skills-container">
           {skills.map((skill, idx) => <span key={idx} className="skill-box">{skill}</span>)}
         </div>
