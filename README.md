@@ -12,19 +12,22 @@ Check out the website here: [Visit my site](https://andrewkhchou.com)
 ●	Utilise technologies such as Firebase, AWS Route 53 to seamlessly integrate the project’s TSX and CSS files, ensuring its readiness prior to public release.
 
 ## Languages/Tools/Frameworks involved to make this?
-###Languages:
+### Languages:
+
 ● TypeScript
 
 ● HTML
 
 ● CSS
 
-###Frameworks/Libraries:
+### Frameworks/Libraries:
+
 ● React JS
 
 ● React Spring Parallax
 
-###Tools/Other Services:
+### Tools/Other Services:
+
 ● Firebase (for easy deployment/Hosting)
 
 ● Generative AI (Dall.E 3)
