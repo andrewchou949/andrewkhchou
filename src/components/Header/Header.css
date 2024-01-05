@@ -1,63 +1,51 @@
-header {
-    background: transparent; /* Example background color */
-    padding: 1rem 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: auto;
-    z-index: 1000;
-  }
+.site-header {
+  opacity: 0;
+  background-color: transparent; 
+  color: #fff;
+  padding: 1rem 0;
+  position: fixed; /* Make the header fixed */
+  width: 100%; /* Ensure the header stretches across the full width */
+  top: 0; /* Stick to the top */
+  left: 0; /* Align to the left */
+  z-index: 1000; /* Ensure it's above other content */
+}
 
-  body, h1, p {
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end; /* Aligns items horizontally */
-    align-items: center; /* Aligns items vertically */
-  }
-  
-  nav li {
-    padding: 0 1rem;
-  }
-  
-  nav a {
-    color: #E0FFFF;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding-bottom: 0.25rem;
-    position: relative;
-    transition: all 0.3s ease;
-    text-decoration: none;
-  }
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
 
-  nav a:hover{
-    color: #3d0fe2;
-  }
-  
-  nav a:hover::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 3px;
-    background-color: currentColor;
-    transition: background-color 0.3s ease;
-  }
+.brand a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
-/* iPad */
-@media only screen and (max-width: 767px) {
-  nav a {
-    font-size: 0.8rem;
-  }
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
 
-  nav li {
-    padding: 0 0.5rem;
+.navigation a {
+  color: #000000;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+  background-color: #575757;
+}
+
+@media (max-width: 768px) {
+  .navigation ul {
+    display: none; /* Hide navigation on smaller screens */
   }
 }

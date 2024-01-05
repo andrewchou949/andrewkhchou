@@ -1,85 +1,78 @@
-/* Home.css */
-#home {
-    /* Styling here */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: [HeaderHeight]px;
-    color: #E0FFFF;
-  }
-  
-#home h1, #home h2, #home h3, #home p {
-  font-family: 'Comic Sans MS', 'Arial', sans-serif;
-  font-weight: bold;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #333;
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 1.5s ease-in-out forwards; /* Fade-in effect */
+}
+
+.content {
   text-align: center;
+  padding: 20px;
 }
 
-#home h1 {
-  font-size: 2rem;
-  padding-right: 28%;
-  transition: transform 1s ease-out, opacity 1s ease-out;
-}
-
-#home h2 {
+.title {
   font-size: 3rem;
-  transition: transform 1s ease-out, opacity 1s ease-out;
+  font-weight: 300;
+  margin: 0;
 }
 
-#home h3 {
+.name {
+  font-weight: 700;
+}
+
+.subtitle {
   font-size: 1.5rem;
-  transition: transform 1s ease-out, opacity 1s ease-out;
+  font-weight: 400;
+  color: #555;
+  margin: 10px 0;
 }
 
-#home p {
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.skills-container {
+  margin-top: 20px;
+  height: 50px; /* Fixed height to avoid layout shift */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Hide the non-active skills */
+}
+
+.skill {
   font-size: 1.5rem;
-  border-right: 2px solid #FFD700;
-  white-space: nowrap;
-  overflow: hidden;
-  color: #FFD700; /* typing text color */
-  min-height: 2.1rem;
-  transition: opacity 1s ease-out;
-  padding-right: 0;
-  display: inline-block;
-  vertical-align: middle; /* Aligns text in the middle vertically */
-}
-
-  /* iPhone and major other phone */
-@media only screen and (max-width: 769px) {
-  #home h1 {
-    font-size: 1.5rem;
-  }
-  #home h2 {
-    font-size: 1.8rem;
-  }
-  #home h3 {
-    font-size: 1.2rem;
-  }
-  #home p {
-    font-size: 1.2rem;
-  }
-}
-
-/* All the iPad and Computer!*/
-@media only screen and (min-width: 769px) {
-  
-}
-
-/* Fading in animation when page loaded */
-.hide {
-  opacity: 0; /* Start elements as invisible */
-}
-
-.fadeIn, .fadeInLater {
   opacity: 0;
-  animation: fadeInAnimation 1s ease forwards;
+  animation: fadeSkill 3s ease-in-out forwards;
 }
 
-.fadeInLater {
-  animation-delay: 0.5s;
+@keyframes fadeSkill {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
 }
 
-@keyframes fadeInAnimation {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+/* Keyframes for the fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title, .subtitle, .description {
+    font-size: calc(1rem + 1.5vw);
+  }
+}
+
+/* Add additional styling for SkillCarousel component */

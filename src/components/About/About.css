@@ -1,70 +1,53 @@
-#about {
-  color: #E0FFFF;
-}
-
-#about h1, #about h2 {
-    font-weight: bold;
-    text-align: center;
-  }
-
-.aboutTitle {
-  font-size: 1.8rem;
-  margin-top: 0rem;
-  margin-bottom: 1rem;
-  text-align: left;
-}
-
-.aboutSection {
+.about-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 2.5rem;
-  color: #000000;
-  background-size: cover;
-  background-position: center;
-  text-align: left;
-}
-
-.aboutContent {
-  max-width: 50%;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  box-sizing: border-box;
-  padding: 20px;
-}
-
-.imageContent {
-  max-width: 50%;
-  padding-left: 20px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.imageContent img{
-  max-width: 85%;
+.about-content h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.about-image img {
+  max-width: 100%;
   height: auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
+.about-image:hover {
+  transform: scale(1.05);
+}
 
-  /* iPhone and major other phone */
-  @media only screen and (max-width: 769px) {
-    #about h1 {
-      font-size: 1.3rem;
-    }
-    #about p {
-      font-size: 0.8rem;
-    }
-    .aboutSection {
-      flex-direction: column; /* Stack the content vertically on small screens */
-    }
-    /* This guy adjust the column directly */
-    .aboutContent, .imageContent {
-      max-width: 100%; /* Allow the content to fill the available space */
-      padding: 10px; /* Adjust padding for smaller screens */
-    }
-    .imageContent img {
-      max-width: 100%; /* Ensure the image is not larger than the container */
-    }
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-container {
+      flex-direction: column-reverse;
+      text-align: center;
   }
+
+  .about-content h1 {
+      font-size: 2rem;
+  }
+
+  .about-content {
+      margin-bottom: 30px;
+  }
+
+  .about-image img {
+      width: 80%;
+      margin: auto;
+  }
+}

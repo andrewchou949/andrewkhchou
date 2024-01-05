@@ -1,85 +1,87 @@
-#contact {
-  color: #E0FFFF;
+.contact-section {
+  padding: 4rem;
 }
 
-.section.contactSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Adjust the height as needed to take up the full viewport */
-  padding: 20px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+.section-title {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 2.5rem;
 }
 
-.contactLeft,
-.contactBoxRight {
-  flex: 1; /* Each child will take up equal space */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; /* Align items to the start of the flex-direction */
-}
-
-.contactLeft {
-  padding-left: 20px;
-  margin-bottom: 280px;
-}
-
-.contactLeft h1 {
+.contact-description {
   margin-bottom: 2rem;
+  color: #555;
+  font-size: 1.1rem;
+  font-style: italic;
 }
 
-.contactBoxRight {
-  padding-left: 20px; /* Add padding between columns */
+.contact-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-@media only screen and (max-width: 768px) {
-  .row {
-    flex-direction: column; /* Stack children vertically on smaller screens */
-  }
+.contact-form:hover {
+  transform: scale(1.05);
+}
 
-  #contact {
-    padding: 10px;
-  }
-  .contactLeft h1 {
-    font-size: 1.3rem;
-  }
+.form-group {
+  margin-bottom: 1rem;
+}
 
-  .contactLeft p {
-    font-size: 0.8rem;
-  }
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
 
-  .contactLeft {
-    width: 100%;
-    align-items: left;
-    padding: 20px 0;
-    margin-bottom: 0;
-  }
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
 
-  .contactBoxRight {
-    width: 100%; /* Full width on small screens */
-    align-items: center; /* Center align the content */
-    padding: 20px 0; /* Add vertical padding */
-    margin-bottom: 0; /* Remove any bottom margin that may be causing the gap */
-  }
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
 
-  .contactLeft {
-    padding-left: 20px; /* Maintain some padding on the left */
-    padding-right: 20px; /* Add padding on the right for consistency */
-    margin-bottom: 0; /* Remove the bottom margin that is causing the gap */
-  }
+.send-button {
+  background: #007bff;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
 
-  .contactBoxRight {
-    padding-left: 20px; /* Maintain some padding on the left */
-    padding-right: 20px; /* Add padding on the right for consistency */
-  }
+.send-button:hover {
+  background: #0056b3;
+}
+
+.confirmation-message {
+  margin-top: 1rem;
+  color: green;
+  text-align: center;
+  font-weight: bold;
+}
+
+.error-message {
+  margin-top: 1rem;
+  color: red;
+  text-align: center;
+  font-weight: bold;
 }

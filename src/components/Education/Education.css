@@ -1,146 +1,169 @@
-#education {
-  color: #E0FFFF;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.education-skills-container {
+    padding: 4rem;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* Container for education details and image */
-.educationSkillsSection {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
-    justify-content: flex-start; /* Align children to the start of the container vertically */
-    width: 100%; /* Full width of the container */
-    max-width: auto; /* Maximum width, adjust as needed */
-    margin: auto; /* Center the section on the page */
-    box-sizing: border-box; /* Include padding and borders in the element's size */
-    height: auto;
-    padding: 2.5rem;
-  }
-  
-  .educationColumn h1 {
-    font-size: 2rem;
-    margin-top: 0rem;
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  .educationColumn h2 {
-    margin-top: 2rem;
-    font-size: 1.25rem;
-    text-align: left;
-  }
-  
-  .educationColumn h3 {
-    font-size: 1.05rem;
-    font-weight: bold;
-    text-align: left;
-    font-style: italic;
-  }
-  
-  .educationColumn p {
-    text-align: left;
-  }
-  
-  /* Row container to hold education and image side by side */
-  .row {
-    display: flex; /* Use flexbox for layout */
-    width: 100%; /* Full width of the container */
-    align-items: flex-start;
-  }
-  
-  /* Left column for education details */
-  .educationColumn {
-    width: 70%;
-    padding: 2rem; /* Add some padding around the content */
-    box-sizing: border-box; /* Include padding and borders in the element's size */
-  }
-  
-  /* Right column for the image */
-  .imageColumn {
-    width: 30%;
-    padding: 20px; /* Add some padding around the content */
+.section-title {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 1.5rem;
+}
+
+.education-section, .skills-section, .volunteering-section {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.education-section:hover {
+  transform: rotate(2deg);
+}
+
+.skills-section:hover {
+  transform: scale(1.05);
+}
+
+.volunteering-section:hover {
+  transform: translateX(10px);
+}
+
+.uni-sub {
+  margin-bottom: 2rem;
+}
+
+.uni-name, .degree-name {
+  margin-bottom: 2px;
+}
+
+.degree-name {
+  font-style: italic;
+}
+
+.skills-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box; /* Include padding and borders in the element's size */
-  }
-  
-  .imageColumn img {
-    width: 100%; /* Make image take full width of its container */
-    height: auto; /* Adjust height automatically */
-    object-fit: contain; /* Ensure the image covers the area without stretching */
-  }
-  
-  /* Style for the skills section */
-  .skillsSection {
-    width: 120%; /* Full width of the container */
-    padding: 20px; /* Add some padding around the content */
-    box-sizing: border-box; /* Include padding and borders in the element's size */
-    text-align: left;
-  }
-  
-  .skillsSection h1 {
-    font-size: 2rem;
-    margin-top: 0rem;
-    margin-bottom: 1rem;
-  }
-  
-  .skillsSection h2 {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
-  }
-  
-  .volunteerSection {
-    width: 100%; /* Full width of the container */
-    padding: 20px; /* Add some padding around the content */
-    box-sizing: border-box; /* Include padding and borders in the element's size */
-    text-align: left;
-  }
-  
-  .volunteerSection h1 {
-    font-size: 2rem;
-    margin-top: 0rem;
-    margin-bottom: 1rem;
-  }
-  
-  .volunteerSection h2 {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
-  }
-  
-  .volunteerSection h3 {
-    font-size: 1rem;
-    font-weight: unset;
-    text-align: right;
-  }
-  
-  /* Responsive adjustments for smaller screens */
-  @media only screen and (max-width: 768px) {
-    .row {
-      flex-direction: column; /* Stack children vertically on smaller screens */
-    }
-  
-    .educationColumn, .imageColumn, .skillsSection, .volunteerSection {
-      width: 100%; /* Each column should take the full width on smaller screens */
-      padding: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.skill-category-title{
+  font-size: 1.6rem;
+  margin-top: 5px;
+}
+
+.skill-name-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Adjust this value as needed */
+}
+
+.skill-items-list {
+  /* Styles for your list */
+  padding-left: 0; /* Removes default padding if needed */
+  list-style-type: none; /* Removes default list bullet points if desired */
+}
+
+.skill-items-list li {
+  /* Styles for your list items */
+  margin-top: 0.25rem; /* Adds space between list items if desired */
+}
+
+.skill-heading {
+  display: flex;
+  margin-bottom: 0.5rem; /* Space below the skill name and proficiency label */
+}
+
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 0.5rem; /* Space below the skill name */
+}
+
+.skill-proficiency-beginner {
+  align-self: start;
+  background-color: #69b3df; 
+  color: white;
+  border-radius: 12px; /* Rounded corners for the label */
+  padding: 0.25rem 0.75rem; /* Padding inside the label */
+  font-size: 0.875rem; /* Smaller font size for the label */
+  font-weight: bold; /* Bold font for better readability */
+  text-transform: uppercase; /* Uppercase text for stylistic choice */
+  margin-bottom: 0.5rem; /* Space below the proficiency label */
+  margin-left: auto;
+}
+
+.skill-proficiency-intermediate {
+  align-self: start;
+  background-color: #3cb5a6; 
+  color: white;
+  border-radius: 12px; /* Rounded corners for the label */
+  padding: 0.25rem 0.75rem; /* Padding inside the label */
+  font-size: 0.875rem; /* Smaller font size for the label */
+  font-weight: bold; /* Bold font for better readability */
+  text-transform: uppercase; /* Uppercase text for stylistic choice */
+  margin-bottom: 0.5rem; /* Space below the proficiency label */
+  margin-left: auto;
+}
+
+.skill-proficiency-advanced {
+  align-self: start;
+  background-color: #4caf50; /* Green color for advanced proficiency */
+  color: white;
+  border-radius: 12px; /* Rounded corners for the label */
+  padding: 0.25rem 0.75rem; /* Padding inside the label */
+  font-size: 0.875rem; /* Smaller font size for the label */
+  font-weight: bold; /* Bold font for better readability */
+  text-transform: uppercase; /* Uppercase text for stylistic choice */
+  margin-bottom: 0.5rem; /* Space below the proficiency label */
+  margin-left: auto;
+}
+
+.skill-items-list {
+  padding-left: 20px; /* Creates indentation for the list */
+  list-style: inside; /* Positions the bullet points inside the content flow */
+  margin: 5px 0; /* Adjusts spacing around the list */
+}
+
+
+.event-name {
+  font-style: italic;
+}
+
+.event-location {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education-skills-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
-    #education h1 {
-      font-size: 1.3rem;
+    .section-title {
+        text-align: center;
     }
-    #education h2 {
-      font-size: 1rem;
+
+    .education-image, .volunteer-image {
+        margin-top: 1rem;
     }
-    #education h3 {
-      font-size: 0.95rem;
-    }
-    #education p {
-      font-size: 0.8rem;
-    }
-    .imageColumn img {
-      max-width: 100%; /* Ensure the image is not larger than the container */
-    }
-  }
+}

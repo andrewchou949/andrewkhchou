@@ -1,57 +1,55 @@
-#story {
-  color:#E0FFFF;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+.mystory-container {
+  padding: 50px; /* Consistent padding from the About section */
+  color: #333; /* Consistent text color */
+  max-width: 1200px; /* Max-width for content management */
+  margin: auto; /* Center the container */
 }
 
-.storySection {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 2.5rem;
-  color: #000000;
-  text-align: left;
+.mystory-title {
+  font-size: 2.5rem; /* Consistent font size with About section */
+  color: #222; /* Consistent color with About section */
+  margin-bottom: 3rem; /* Adjusted bottom margin for spacing */
+  text-align: left; /* Align text to the left */
 }
 
-.myStoryTitle {
-    font-size: 1.8rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    text-align: left;
+.mystory-section {
+  margin-bottom: 3rem; /* Adjusted margin for a more reasonable space */
+  padding: 1.5rem; /* Adjusted padding within sections */
+  background: #f8f9fa; /* Light background for section distinction */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease;
+}
+
+.mystory-section:hover {
+  transform: perspective(1500px) rotateY(10deg);
+}
+
+.mystory-section h2 {
+  font-size: 1.6rem; /* Consistent font size with About section subtitles */
+  color: #222; /* Consistent color with About section subtitles */
+  margin-bottom: 1rem; /* Consistent margin with About section subtitles */
+}
+
+.mystory-section p {
+  font-size: 1rem; /* Consistent font size with About section content */
+  color: #666; /* Consistent color with About section content */
+  line-height: 1.6; /* Consistent line height with About section content */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mystory-title {
+    text-align: center; /* Centered title on smaller screens */
   }
 
-.storyContent {
-  column-count: 2;
-  column-gap: 2rem;
-  max-width: 100%;
-  margin: auto;
-}
-
-.storyContent h2 {
-  font-size: 1.35rem;
-  margin-top: 0rem;
-  margin-bottom: 0.5rem;
-  text-align: left;
-  
-}
-
-.storyContent p {
-  font-size: 0.92rem;
-  margin-bottom: 0.5rem;
-}
-
-@media only screen and (max-width: 768px) {
-  .storyContent {
-    column-count: 1;
+  .mystory-section {
+    margin-bottom: 2rem; /* Slightly reduced margin for mobile view */
   }
 
-  #story h1 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-  }
-  #story h2 {
-    font-size: 1rem;
-  }
-  #story p {
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
+  .mystory-section h2 {
+    font-size: 1.5rem; /* Adjusted font size for mobile view */
   }
 }

@@ -8,16 +8,16 @@
 }
 
 .social-icons a {
-  color: #E0FFFF; 
+  color: #000000; 
   transition: color 0.3s ease;
 }
 
 .social-icons a:hover,
 .social-icons a:focus {
-  color: #FFA500; /* Darker color on hover/focus */
+  color: #FFA500; /* color on hover/focus */
 }
 
-/* GitHub icon color, if you want a specific color for GitHub icons */
+/* GitHub icon color */
 .social-icons a.github-icon {
   color: #333; /* GitHub icon color */
 }

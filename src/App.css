@@ -22,7 +22,6 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Define your background image for the entire page */
 .App {
   background-size: cover;
   background-repeat: no-repeat;

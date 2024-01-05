@@ -1,26 +1,79 @@
-#projects {
-  padding: 50px;
-  color: #E0FFFF;
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 4rem;
 }
 
-#projects h1 {
+.project-title {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 30px;
   text-align: left;
-  margin-bottom: 2rem; /* Add some space below the header */
 }
 
-/* Assuming ProjectCard has its own internal padding and margins */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  align-items: flex-start;
+}
 
-@media only screen and (max-width: 768px) {
-  #projects {
-    padding: 50px 10px;
-  }
-  
-  .projects-container {
-    gap: 20px; /* Smaller gap for smaller screens */
-  }
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  color: #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
 
-  #projects h1 {
-    font-size: 1.5rem; /* Slightly larger font size for readability */
-    padding: 20px;
+.project-card:hover {
+  transform: translate3d(10px, 20px, 0px);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.project-description {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.project-tech-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.project-tech-item {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.project-link {
+  text-decoration: none;
+  background: #0066ff;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .project-grid {
+      grid-template-columns: 1fr;
   }
 }
