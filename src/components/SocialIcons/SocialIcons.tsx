@@ -12,7 +12,7 @@ import './SocialIcons.css';
 const SocialIcons = () => {
   return (
     <div className="social-icons">
-      <a href="https://www.linkedin.com/in/kimhour-chou-a2a13a19a/" target="_blank" rel="noopener noreferrer" title="Want to connect my LinkedIn? 🤝">
+      <a href="https://www.linkedin.com/in/andrewkhchou/" target="_blank" rel="noopener noreferrer" title="Want to connect my LinkedIn? 🤝">
         <FontAwesomeIcon icon={faLinkedin} size="2x" />
       </a>
       <a href="https://github.com/andrewchou949" target="_blank" rel="noopener noreferrer" title="Check out my repos ䷛">
