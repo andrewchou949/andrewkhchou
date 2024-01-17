@@ -52,6 +52,14 @@
   font-style: italic;
 }
 
+.paragraph {
+  padding: 5px;
+}
+
+.bolded-title {
+  font-weight: bold;
+}
+
 .skills-list {
     display: flex;
     flex-wrap: wrap;
