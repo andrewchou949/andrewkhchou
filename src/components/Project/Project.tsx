@@ -4,14 +4,15 @@ import './Project.css';
 import projectImage1 from '../../backgroundImage/PersonalProject.png'
 import projectImage2 from '../../backgroundImage/Language Application.png'
 import projectImage3 from '../../backgroundImage/Database.png'
+import projectImage4 from '../../backgroundImage/VoiceRecognition.png'
 
 const projectsData =[
     {
-        title: 'Personal Self Introduction Webpage', 
-        description: 'Utilizing React, TypeScript, Firebase, and AWS Route 53, this personal website project is a dynamic showcase of web development and UI/UX design expertise. Experience a seamless, feature-rich user journey that highlights the integration of these cutting-edge tools.',
-        demoLink: 'https://github.com/andrewchou949/andrewkhchou',
-        imageUrl: projectImage1,
-        skills: ['TypeScript', 'Firebase', 'React', 'AWS Route 53', 'DALL-E 3', 'React Spring Parallax', 'Responsive Design']
+    title: 'Personal Self Introduction Webpage', 
+    description: 'Utilizing React, TypeScript, Firebase, and AWS Route 53, this personal website project is a dynamic showcase of web development and UI/UX design expertise. Experience a seamless, feature-rich user journey that highlights the integration of these cutting-edge tools.',
+    demoLink: 'https://github.com/andrewchou949/andrewkhchou',
+    imageUrl: projectImage1,
+    skills: ['TypeScript', 'Firebase', 'React', 'AWS Route 53', 'DALL-E 3', 'React Spring Parallax', 'Responsive Design']
     },
     {
     title: 'Polyglot Go (Capstone Project: CSS 497)', 
@@ -26,6 +27,13 @@ const projectsData =[
     demoLink: 'https://drive.google.com/file/d/1XQaFPqE76fcg3tohY20wL8O667U0Qf5X/view?usp=sharing',
     imageUrl: projectImage3,
     skills: ['SQLite', 'Lucid Chart', 'Technical Writing']
+    },
+    {
+    title: 'Voice Recognition/Summary Web App',
+    description: 'Leverating the OpenAI Whisper model for precise voice recognition, combined with ChatGPT-3.5 Turbo for efficient summary creation, setting a new standard in user-focused applications. Hosted with Google Cloud CLI for dependable backend operation, scalable API service delivery. The frontend, crafted with Create React App (CRA) and elegantly styled with Tailwind CSS, offers an intuitive and visually appealing user interface.',
+    demoLink: 'https://vrfrontend.web.app/',
+    imageUrl: projectImage4,
+    skills: ['React', 'Tailwind CSS', 'Flask', 'Google Cloud', 'Openai-Whisper', 'ChatGPT3.5-Turbo', 'API Usage']
     }
 ];
 

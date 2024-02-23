@@ -4,7 +4,7 @@ import SocialIcons from '../SocialIcons/SocialIcons';
 
 const Home = () => {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
-  const skills = ["Python", "C++", "Java", "SQLite", "Dart", "React", "TypeScript",  "AWS Route 53", "Firebase", "FlutterFlow", "Canva", "Technical Writing", " Lucid Chart"];
+  const skills = ["Python", "C++", "Java", "SQLite", "Dart", "React", "TypeScript",  "AWS Route 53", "Google Cloud CLI", "Google Firebase", "FlutterFlow", "Canva", "Technical Writing", " Lucid Chart", "Tailwind CSS", "Openai-Whisper", "ChatGPT3.5-Turbo"];
   const [showName, setShowName] = useState(false);
   const [showContent, setShowContent] = useState(false);
 
