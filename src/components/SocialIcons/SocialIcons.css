@@ -14,12 +14,12 @@
 
 .social-icons a:hover,
 .social-icons a:focus {
-  color: #FFA500; /* color on hover/focus */
+  color: #FFA500; /* color on hover/focus for the faIcon image!*/
 }
 
 /* GitHub icon color */
 .social-icons a.github-icon {
-  color: #333; /* GitHub icon color */
+  color: #333; /* GitHub icon color for the faIcon image!*/
 }
 
 .social-icons a.github-icon:hover,
