@@ -1,7 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'; 
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'; 
 /*
+, faGithub // Add inside {} of line 3 to use github icon from fontawesome
 npm install --save @fortawesome/fontawesome-svg-core
 npm install --save @fortawesome/free-brands-svg-icons
 npm install --save @fortawesome/react-fontawesome
