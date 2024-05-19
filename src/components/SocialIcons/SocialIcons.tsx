@@ -8,6 +8,7 @@ npm install --save @fortawesome/react-fontawesome
 */
 import { faEnvelope, faPaperclip } from '@fortawesome/free-solid-svg-icons'; // npm install @fortawesome/free-solid-svg-icons
 import './SocialIcons.css';
+import ORCIDLogo from '../../backgroundImage/ORCID.png'
 
 const SocialIcons = () => {
   return (
@@ -23,6 +24,9 @@ const SocialIcons = () => {
       </a>
       <a href="/AndrewKHChou.pdf" download="AndrewKHChou_Resume.pdf" title="Download my Resume here! 😁">
         <FontAwesomeIcon icon={faPaperclip} size="2x" />
+      </a>
+      <a href="https://orcid.org/0009-0008-2413-3138" target="_blank" rel="noopener noreferrer" title="My ORCID Link in case needed 👏">
+      <img src={ORCIDLogo} alt="ORCID Logo" style={{ width: '32px', height: '32px' }} />
       </a>
     </div>
   );
