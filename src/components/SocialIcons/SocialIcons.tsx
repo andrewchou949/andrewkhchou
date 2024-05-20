@@ -18,15 +18,15 @@ const SocialIcons = () => {
       <a href="https://www.linkedin.com/in/andrewkhchou/" target="_blank" rel="noopener noreferrer" title="Want to connect my LinkedIn? 🤝">
         <FontAwesomeIcon icon={faLinkedin} size="2x" />
       </a>
-      <a href="https://github.com/andrewchou949" target="_blank" rel="noopener noreferrer" title="Check out my repos ䷛">
-        {/* <FontAwesomeIcon icon={faGithub} size="2x" /> */}
-        <img src={GithubLogo} alt="Github Logo" style={{ width: '32px', height: '32px' }} />
-      </a>
       <a href="mailto:andrewchou949@gmail.com" target="_blank" rel="noopener noreferrer" title="Email Me 📩">
         <FontAwesomeIcon icon={faEnvelope} size="2x" />
       </a>
       <a href="/AndrewKHChou.pdf" download="AndrewKHChou_Resume.pdf" title="Download my Resume here! 😁">
         <FontAwesomeIcon icon={faPaperclip} size="2x" />
+      </a>
+      <a href="https://github.com/andrewchou949" target="_blank" rel="noopener noreferrer" title="Check out my repos ䷛">
+        {/* <FontAwesomeIcon icon={faGithub} size="2x" /> */}
+        <img src={GithubLogo} alt="Github Logo" style={{ width: '32px', height: '32px' }} />
       </a>
       <a href="https://orcid.org/0009-0008-2413-3138" target="_blank" rel="noopener noreferrer" title="My ORCID Link in case needed 👏">
         <img src={ORCIDLogo} alt="ORCID Logo" style={{ width: '32px', height: '32px' }} />
