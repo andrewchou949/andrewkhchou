@@ -23,11 +23,11 @@ const projectsData =[
     skills: ['FlutterFlow', 'Firebase', 'Dart', 'Lucid Chart', 'Canva', 'Technical Writing']
     },
     {
-    title: 'Bank System Database',
-    description: 'Created to enhance data management for a class final project, the Banking System Database offers a centralized solution for organizing account details, transaction histories, employee information, and more. This simplifies the retrieval of crucial data, ensuring efficiency in your project\'s execution.',
-    demoLink: 'https://drive.google.com/file/d/1XQaFPqE76fcg3tohY20wL8O667U0Qf5X/view?usp=sharing',
-    imageUrl: projectImage3,
-    skills: ['SQLite', 'Lucid Chart', 'Technical Writing']
+    title: 'Discord Bot - Andrew\'s Bot',
+    description: 'Andrew\'s Bot is designed to enhance server functionalities through the implementation of slash commands and integration with the Genshin Impact API. This bot provides users with seamless interaction capabilities and real-time access to in-game information. Utilizing JavaScript and the discord.js library, this project demonstrates a robust understanding of bot development and API integration.',
+    demoLink: 'https://github.com/andrewchou949/discord-bot',
+    imageUrl: projectImage5,
+    skills: ['JavaScript', 'discord.js', 'RESTful API', 'Project Management']
     },
     {
     title: 'Voice Recognition/Summary Web App',
@@ -37,11 +37,11 @@ const projectsData =[
     skills: ['React', 'Tailwind CSS', 'Flask', 'Google Cloud', 'Openai-Whisper', 'ChatGPT3.5-Turbo', 'RESTful API']
     },
     {
-    title: 'Discord Bot - Andrew\'s Bot',
-    description: 'Andrew\'s Bot is designed to enhance server functionalities through the implementation of slash commands and integration with the Genshin Impact API. This bot provides users with seamless interaction capabilities and real-time access to in-game information. Utilizing JavaScript and the discord.js library, this project demonstrates a robust understanding of bot development and API integration.',
-    demoLink: 'https://github.com/andrewchou949/discord-bot',
-    imageUrl: projectImage5,
-    skills: ['JavaScript', 'discord.js', 'RESTful API', 'Project Management']
+    title: 'Bank System Database',
+    description: 'Created to enhance data management for a class final project, the Banking System Database offers a centralized solution for organizing account details, transaction histories, employee information, and more. This simplifies the retrieval of crucial data, ensuring efficiency in your project\'s execution.',
+    demoLink: 'https://drive.google.com/file/d/1XQaFPqE76fcg3tohY20wL8O667U0Qf5X/view?usp=sharing',
+    imageUrl: projectImage3,
+    skills: ['SQLite', 'Lucid Chart', 'Technical Writing']
     }
 ];
 
