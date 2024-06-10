@@ -17,8 +17,8 @@ const About = () => {
                 <p>
                 Throughout my studies, I have actively engaged in various projects and events, including volunteering at IEEE 
                 conferences and working on personal projects like a Voice Recognition/Summary Web Application and a Personal 
-                Finance Management Application with Fraud Detection. These experiences have honed my skills in machine learning, 
-                Python, and full-stack development.
+                Finance Management Application with Fraud Detection. These experiences have honed my skills in Machine Learning, 
+                Python, and Fullstack development.
                 </p>
                 <p>
                 I am consistently excited by the ever-evolving landscape of technology. The drive to learn and adapt to new 
