@@ -23,7 +23,8 @@ const About = () => {
                 <p>
                 I am consistently excited by the ever-evolving landscape of technology. The drive to learn and adapt to new 
                 innovations keeps me on my toes and fuels my dedication to the field. My goal is to leverage my skills and experiences 
-                to contribute to impactful projects and continue growing as a software engineer.
+                to contribute to impactful projects and continue growing as a software engineer. In my free time, I enjoy exploring new technologies, 
+                working on open-source projects, and staying updated with the latest industry trends.
                 </p>
             </div>
             <div className="about-image">

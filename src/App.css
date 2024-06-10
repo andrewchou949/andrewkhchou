@@ -12,9 +12,8 @@ html {
 }
 
 body {
-  /* No padding-top by default */
-  /* Font: Comic Sans MS or Apple Chancery or Bradley Hand */
-  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  /* Use Lato font for a professional look */
+  font-family: 'Lato', 'Arial', sans-serif;
 }
 
 html, body {
@@ -27,7 +26,7 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed; /* This line make the background fixed even when content is scrolled */
+  background-attachment: fixed; /* This line makes the background fixed even when content is scrolled */
 }
 
 .section {
@@ -38,7 +37,7 @@ html, body {
   padding: 0;
 }
 
-/* iPhone and major other phone */
+/* iPhone and major other phones */
 @media only screen and (max-width: 769px) {
   .App {
     /* Adjust background size as requested */
@@ -52,7 +51,7 @@ html, body {
   }
 }
 
-/* All the iPad and Computer!*/
+/* All the iPads and Computers */
 @media only screen and (min-width: 769px) {
   .App {
     /* Fixed background for larger screens */
