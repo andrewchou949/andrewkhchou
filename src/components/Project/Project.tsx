@@ -10,7 +10,7 @@ import projectImage6 from '../../backgroundImage/Database.png'
 
 const projectsData =[
     {
-    title: 'Personal Finance Management Application with Fraud Detection',
+    title: 'Personal Finance Management Application with Fraud Detection (In Progress)',
     description: 'Developing an application to help users track expenses and detect fraudulent transactions using machine learning. Implementing user authentication, expense tracking, data visualization, and fraud detection alerts. Utilizing technologies such as Django for backend, React for frontend, and machine learning models for fraud detection. Hosting on AWS for scalable and secure deployment.',
     demoLink: 'https://github.com/andrewchou949/Personal-Finance-Management-Application',
     imageUrl: projectImage1,
