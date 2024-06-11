@@ -1,6 +1,6 @@
 .site-header {
   opacity: 0;
-  background-color: transparent; 
+  background-color: transparent;
   color: #fff;
   padding: 1rem 0;
   position: fixed; /* Make the header fixed */
@@ -37,11 +37,62 @@
   color: #000000;
   text-decoration: none;
   padding: 0.5rem;
-  transition: background-color 0.3s;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navigation a::before,
+.navigation a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #575757;
+  transition: transform 0.3s;
+}
+
+.navigation a::before {
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  animation: none;
+}
+
+.navigation a::after {
+  bottom: 0;
+  right: 0;
+  transform-origin: right;
+  animation: none;
+}
+
+.navigation a:hover::before,
+.navigation a:hover::after {
+  animation: box-animation 2s linear infinite;
 }
 
 .navigation a:hover {
-  background-color: #575757;
+  color: #000000;
+}
+
+@keyframes box-animation {
+  0%, 100% {
+    width: 0;
+    height: 2px;
+  }
+  25% {
+    width: 100%;
+    height: 2px;
+  }
+  50% {
+    width: 100%;
+    height: 2px;
+    transform: translateY(-100%);
+  }
+  75% {
+    width: 0;
+    height: 2px;
+    transform: translateY(-100%);
+  }
 }
 
 @media (max-width: 768px) {
