@@ -1,0 +1,85 @@
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 2rem;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 20px;
+  }
+  
+  /* Job Experience Container */
+  .job-experience-container {
+    padding-left: 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 4rem; /* padding for spaces around */
+  }
+  
+  /* Job Experience List */
+  .job-experience-list {
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Job Card Styling */
+  .job-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .job-card:hover {
+    transform: translateY(10px);
+  }
+  
+  /* Position Title */
+  .job-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  /* Company Name */
+  .company-name {
+    font-size: 1.2rem;
+    font-weight: 400;   /* Lighter weight for company name */
+    color: #777;        /* Slightly lighter color */
+    margin-bottom: 15px; /* Add space below company name */
+  }
+  
+  /* Duration Styling */
+  .job-card p {
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  /* Job Description List */
+  .job-card ul {
+    list-style: inside; /* bullet point! */
+    padding-left: 20px;
+  }
+  
+  .job-card ul li {
+    margin-bottom: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .job-experience-container {
+      width: 95%;
+    }
+  
+    .section-title {
+      text-align: center;
+    }
+  
+    .job-card {
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
