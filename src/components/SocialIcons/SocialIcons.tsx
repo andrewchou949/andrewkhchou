@@ -21,7 +21,7 @@ const SocialIcons = () => {
       <a href="mailto:andrewchou949@gmail.com" target="_blank" rel="noopener noreferrer" title="Email Me 📩">
         <FontAwesomeIcon icon={faEnvelope} size="2x" />
       </a>
-      <a href="/AndrewKHChou Resume.pdf" download="AndrewKHChou_Resume.pdf" title="Download my Resume here! 😁">
+      <a href="/AndrewKHChou Resume.docx" download="AndrewKHChou_Resume.docx" title="Download my Resume here! 😁">
         <FontAwesomeIcon icon={faPaperclip} size="2x" />
       </a>
       <a href="https://github.com/andrewchou949" target="_blank" rel="noopener noreferrer" title="Check out my repos ䷛">
