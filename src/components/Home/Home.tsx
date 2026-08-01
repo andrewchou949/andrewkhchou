@@ -4,7 +4,7 @@ import SocialIcons from '../SocialIcons/SocialIcons';
 
 const Home = () => {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
-  const skills = ["Python", "C++", "Java", "SQLite", "Dart", "React", "TypeScript",  "AWS Route 53", "Google Cloud CLI", "Google Firebase", "FlutterFlow", "Canva", "Technical Writing", " Lucid Chart", "Tailwind CSS", "Openai-Whisper", "ChatGPT3.5-Turbo", "Flask", "Linux", "Docker", "RESTful API"];
+  const skills = ["Python", "C++", "Java", "SQL", "SQL Server", "SQLite", "Dart", "React", "ASP.NET", "Blazor .NET", "TypeScript", "AWS Route 53", "Google Cloud CLI", "Google Firebase", "FlutterFlow", "Canva", "Technical Writing", "Lucid Chart", "Tailwind CSS", "Openai-Whisper", "ChatGPT3.5-Turbo", "Flask", "Linux", "Docker", "RESTful API"];
   const [showName, setShowName] = useState(false);
   const [showContent, setShowContent] = useState(false);
 
@@ -35,8 +35,8 @@ const Home = () => {
       <div className="content">
         <h1 className="title">Hello, I'm <span className="name" style={nameStyle}>Andrew (Kimhour) Chou</span></h1>
         <div style={contentStyle}>  
-          <h2 className="subtitle">Recent CSSE Undergrad Student</h2>
-          <p className="description">Aspiring Software Engineer | Technology Enthusiast | Open to Job Opportunities</p>
+          <h2 className="subtitle">Costco Wholesale EDI System Admin</h2>
+          <p className="description">Aspiring Software Engineer | Technology Enthusiast</p>
           <SocialIcons/>
           <div className="skills-container">
             <div key={skills[currentSkillIndex]} className="skill">
