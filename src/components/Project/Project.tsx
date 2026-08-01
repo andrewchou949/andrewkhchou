@@ -10,7 +10,7 @@ import projectImage6 from '../../backgroundImage/Database.png'
 
 const projectsData =[
     {
-    title: 'Personal Finance Management Application with Fraud Detection (In Progress)',
+    title: 'Personal Finance Management Application with Fraud Detection',
     description: 'Developing an application to help users track expenses and detect fraudulent transactions using machine learning. Implementing user authentication, expense tracking, data visualization, and fraud detection alerts. Utilizing technologies such as Django for backend, React for frontend, and machine learning models for fraud detection. Hosting on AWS for scalable and secure deployment.',
     demoLink: 'https://github.com/andrewchou949/Personal-Finance-Management-Application',
     imageUrl: projectImage1,
@@ -19,7 +19,7 @@ const projectsData =[
     {
     title: 'Voice Recognition/Summary Web App',
     description: 'Leverating the OpenAI Whisper model for precise voice recognition, combined with ChatGPT-3.5 Turbo for efficient summary creation, setting a new standard in user-focused applications. Hosted with Google Cloud CLI for dependable backend operation, scalable API service delivery. The frontend, crafted with Create React App (CRA) and elegantly styled with Tailwind CSS, offers an intuitive and visually appealing user interface.',
-    demoLink: 'https://vrfrontend.web.app/',
+    demoLink: '',
     imageUrl: projectImage2,
     skills: ['React', 'Tailwind CSS', 'Flask', 'Google Cloud', 'Openai-Whisper', 'ChatGPT3.5-Turbo', 'RESTful API']
     },
@@ -68,7 +68,9 @@ const Project = () => {
                               <li className="project-tech-item" key={techIndex}>{tech}</li>
                           ))}
                       </ul>
-                      <a className="project-link" href={project.demoLink    } target="_blank" rel="noopener noreferrer">Link</a>
+                      {project.demoLink && (
+                        <a className="project-link" href={project.demoLink} target="_blank" rel="noopener noreferrer">Link</a>
+                      )}
                   </div>
               ))}
           </div>

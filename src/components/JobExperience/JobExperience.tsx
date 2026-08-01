@@ -5,22 +5,22 @@ const JobExperience = () => {
   const jobExperiences = [
     {
       company: "Costco Wholesale Corporate",
-      position: "Accounting Technical Services Intern",
-      duration: "May 2026 - Aug 2026",
-      description: [
-        "Interned with the Accounting Technical Services team on major internal web development projects.",
-        "Built and supported web application features using Blazor .NET and ASP.NET.",
-        "Worked with SQL Server, Tableau, and Power BI to support reporting, data access, and business insights."
-      ]
-    },
-    {
-      company: "Costco Wholesale Corporate",
       position: "EDI System Admin",
       duration: "Aug 2026 - Present",
       description: [
         "Administer EDI systems supporting Costco's business and accounting technology workflows.",
         "Support production data exchange processes, system monitoring, and issue resolution.",
         "Collaborate with technical and business teams to maintain reliable integrations and reporting processes."
+      ]
+    },
+    {
+      company: "Costco Wholesale Corporate",
+      position: "Accounting Technical Services Intern",
+      duration: "May 2026 - Aug 2026",
+      description: [
+        "Interned with the Accounting Technical Services team on major internal web development projects.",
+        "Built and supported web application features using Blazor .NET and ASP.NET.",
+        "Worked with SQL Server, Tableau, and Power BI to support reporting, data access, and business insights."
       ]
     },
     {
