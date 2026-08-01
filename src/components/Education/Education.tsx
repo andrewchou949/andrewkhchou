@@ -61,6 +61,14 @@ const Education = () => {
 
                   <div className="skill-item">
                     <div className="skill-name-icon">
+                      <FontAwesomeIcon icon={faDatabase} size="lg" />
+                      <span className="skill-name">SQL Server</span>
+                    </div>
+                    <span className="skill-proficiency-beginner">Working on it</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <div className="skill-name-icon">
                       <FontAwesomeIcon icon={faBolt} size="lg" />
                       <span className="skill-name">Dart</span>
                     </div>
@@ -89,6 +97,22 @@ const Education = () => {
                     <div className="skill-name-icon">
                       <FontAwesomeIcon icon={faReact} size="lg" />
                       <span className="skill-name">React</span>
+                    </div>
+                    <span className="skill-proficiency-beginner">Working on it</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <div className="skill-name-icon">
+                      <FontAwesomeIcon icon={faFileCode} size="lg" />
+                      <span className="skill-name">ASP.NET</span>
+                    </div>
+                    <span className="skill-proficiency-intermediate">In the groove</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <div className="skill-name-icon">
+                      <FontAwesomeIcon icon={faLayerGroup} size="lg" />
+                      <span className="skill-name">Blazor .NET</span>
                     </div>
                     <span className="skill-proficiency-beginner">Working on it</span>
                   </div>
@@ -164,5 +188,4 @@ const Education = () => {
 };
 
 export default Education;
-
 
