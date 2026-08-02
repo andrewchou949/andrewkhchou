@@ -1,52 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
-
 .mystory-container {
-  padding: 50px; /* Consistent padding from the About section */
-  color: #333; /* Consistent text color */
-  max-width: 1200px; /* Max-width for content management */
-  margin: auto; /* Center the container */
+  padding: var(--section-y) var(--section-x);
+  color: var(--text);
+  max-width: var(--content-max);
+  margin: auto;
 }
 
 .mystory-title {
-  font-size: 2.5rem; /* Consistent font size with About section */
-  color: #222; /* Consistent color with About section */
-  margin-bottom: 3rem; /* Adjusted bottom margin for spacing */
-  text-align: left; /* Align text to the left */
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text);
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
 .mystory-section {
-  margin-bottom: 3rem; /* Adjusted margin for a more reasonable space */
-  padding: 1.5rem; /* Adjusted padding within sections */
-  background: #f8f9fa; /* Light background for section distinction */
-  border-radius: 8px; /* Rounded corners for a modern look */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-  transition: transform 0.3s ease;
+  margin-bottom: 1rem;
+  padding: 1.6rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .mystory-section:hover {
-  transform: perspective(1500px) rotateY(10deg);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .mystory-section h2 {
-  font-size: 1.6rem; /* Consistent font size with About section subtitles */
-  color: #222; /* Consistent color with About section subtitles */
-  margin-bottom: 1rem; /* Consistent margin with About section subtitles */
+  font-size: 1.25rem;
+  color: var(--text);
+  margin-bottom: 0.7rem;
 }
 
 .mystory-section p {
-  font-size: 1rem; /* Consistent font size with About section content */
-  color: #666; /* Consistent color with About section content */
-  line-height: 1.6; /* Consistent line height with About section content */
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .mystory-title {
-    text-align: center; /* Centered title on smaller screens */
+    text-align: left;
   }
 
   .mystory-section {
-    margin-bottom: 2rem; /* Slightly reduced margin for mobile view */
+    margin-bottom: 1rem;
   }
 
   .mystory-section h2 {

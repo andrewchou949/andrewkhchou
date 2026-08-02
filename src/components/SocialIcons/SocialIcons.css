@@ -1,30 +1,56 @@
 /* SocialIcons.css */
 .social-icons {
   display: flex;
-  justify-content: center; /* Center the icons horizontally */
-  align-items: center; /* Center the icons vertically */
-  gap: 1rem; /* Add some space between the icons */
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
   margin-top: 1rem;
 }
 
 .social-icons a {
-  color: #000000; 
-  transition: color 0.3s ease;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.08);
+  transition: color 0.2s ease, transform 0.2s ease, border 0.2s ease;
 }
 
 .social-icons a:hover,
 .social-icons a:focus {
-  color: #FFA500; /* color on hover/focus for the faIcon image!*/
+  color: var(--accent-strong);
+  border-color: rgba(15, 159, 143, 0.28);
+  transform: translateY(-2px);
 }
 
-/* GitHub icon color */
 .social-icons a.github-icon {
-  color: #333; /* GitHub icon color for the faIcon image!*/
+  color: var(--text);
 }
 
 .social-icons a.github-icon:hover,
 .social-icons a.github-icon:focus {
-  color: #6cc644; /* GitHub green color on hover/focus */
+  color: var(--accent-strong);
+}
+
+.profile-card .social-icons {
+  justify-content: flex-start;
+}
+
+.profile-card .social-icons a {
+  color: #11100e;
+  background: rgba(17, 16, 14, 0.05);
+  border-color: rgba(17, 16, 14, 0.14);
+  box-shadow: none;
+}
+
+.profile-card .social-icons a:hover,
+.profile-card .social-icons a:focus {
+  color: var(--accent);
 }
 
 

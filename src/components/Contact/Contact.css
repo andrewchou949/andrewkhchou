@@ -1,36 +1,33 @@
 .contact-section {
-  padding: 4rem;
+  padding: var(--section-y) var(--section-x);
+  background: var(--surface);
 }
 
 .contact-container {
-  max-width: 1200px;
+  max-width: 760px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .section-title {
   margin-bottom: 1rem;
-  color: #333;
-  font-size: 2.5rem;
+  color: var(--text);
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .contact-description {
   margin-bottom: 2rem;
-  color: #555;
+  color: var(--text-muted);
   font-size: 1.1rem;
-  font-style: italic;
+  line-height: 1.6;
 }
 
 .contact-form {
-  background: #fff;
+  background: var(--surface-muted);
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.contact-form:hover {
-  transform: scale(1.05);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
 }
 
 .form-group {
@@ -40,16 +37,27 @@
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: var(--text);
+  font-weight: 800;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   font-size: 1rem;
+  color: var(--text);
+  background: #fff;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: rgba(15, 159, 143, 0.55);
+  box-shadow: 0 0 0 4px rgba(15, 159, 143, 0.12);
 }
 
 .form-group textarea {
@@ -58,30 +66,44 @@
 }
 
 .send-button {
-  background: #007bff;
-  color: #fff;
+  background: var(--surface-strong);
+  color: #11100e;
   padding: 0.75rem 2rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 999px;
   font-size: 1rem;
+  font-weight: 800;
   cursor: pointer;
   margin-top: 1rem;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .send-button:hover {
-  background: #0056b3;
+  background: var(--accent-strong);
+  color: #11100e;
+  transform: translateY(-1px);
 }
 
 .confirmation-message {
   margin-top: 1rem;
-  color: green;
+  color: var(--accent-strong);
   text-align: center;
   font-weight: bold;
 }
 
 .error-message {
   margin-top: 1rem;
-  color: red;
+  color: var(--accent-coral);
   text-align: center;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: var(--section-y) 1.25rem;
+  }
+
+  .contact-form {
+    padding: 1.25rem;
+  }
 }

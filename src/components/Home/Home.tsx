@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
 import SocialIcons from '../SocialIcons/SocialIcons';
+import aboutPic from '../../backgroundImage/aboutpic.png';
 
 const Home = () => {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
@@ -33,11 +34,33 @@ const Home = () => {
   return (
     <div id="home" className="home-container">
       <div className="content">
-        <h1 className="title">Hello, I'm <span className="name" style={nameStyle}>Andrew (Kimhour) Chou</span></h1>
-        <div style={contentStyle}>  
-          <h2 className="subtitle">Costco Wholesale EDI System Admin</h2>
-          <p className="description">Aspiring Software Engineer | Technology Enthusiast</p>
+        <aside className="profile-card" style={nameStyle}>
+          <div className="profile-image-wrap">
+            <img src={aboutPic} alt="Andrew Chou" />
+          </div>
+          <h1 className="title">Andrew <span className="name">(Kimhour) Chou</span></h1>
+          <p className="profile-summary">EDI System Admin building practical technology solutions for business operations.</p>
           <SocialIcons/>
+        </aside>
+
+        <div className="hero-main" style={contentStyle}>
+          <p className="hero-eyebrow">Costco Wholesale</p>
+          <h2 className="subtitle">EDI System Admin</h2>
+          <p className="description">Aspiring Software Engineer | Technology Enthusiast</p>
+          <div className="hero-stats">
+            <div>
+              <strong>CSSE</strong>
+              <span>UW Graduate</span>
+            </div>
+            <div>
+              <strong>ATS</strong>
+              <span>Corporate Tech</span>
+            </div>
+            <div>
+              <strong>EDI</strong>
+              <span>Systems Admin</span>
+            </div>
+          </div>
           <div className="skills-container">
             <div key={skills[currentSkillIndex]} className="skill">
               {skills[currentSkillIndex]}

@@ -1,54 +1,190 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
-
 .home-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  color: #333;
-  opacity: 0; /* Start invisible */
-  animation: fadeIn 1.5s ease-in-out forwards; /* Fade-in effect */
+  min-height: 100vh;
+  padding: 7rem var(--section-x) 5rem;
+  color: var(--text);
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in-out forwards;
+  background:
+    linear-gradient(180deg, rgba(17, 16, 14, 0.2), rgba(17, 16, 14, 0.96)),
+    radial-gradient(circle at 15% 20%, rgba(221, 122, 47, 0.18), transparent 26rem);
 }
 
 .content {
-  text-align: center;
-  padding: 20px;
+  text-align: left;
+  width: min(1120px, 100%);
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 4.5rem);
+  align-items: center;
+}
+
+.profile-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 580px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  background: #f1eee7;
+  border-radius: var(--radius);
+  color: #11100e;
+  box-shadow: var(--shadow-md);
+}
+
+.profile-card::before,
+.profile-card::after {
+  content: "";
+  position: absolute;
+  border: 3px dashed var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.profile-card::before {
+  width: 190px;
+  height: 190px;
+  top: -90px;
+  left: -40px;
+}
+
+.profile-card::after {
+  width: 150px;
+  height: 150px;
+  right: -60px;
+  bottom: 90px;
+}
+
+.profile-image-wrap {
+  position: relative;
+  z-index: 1;
+  height: 300px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #d7d1c6;
+}
+
+.profile-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.86) contrast(1.04);
 }
 
 .title {
-  font-size: 3rem;
-  font-weight: 300;
-  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  font-weight: 800;
+  line-height: 0.96;
+  margin: auto 0 0;
+  color: #11100e;
 }
 
 .name {
-  font-weight: 700;
+  display: inline;
+  color: #11100e;
+}
+
+.profile-summary {
+  position: relative;
+  z-index: 1;
+  max-width: 290px;
+  color: rgba(17, 16, 14, 0.68);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.hero-main {
+  padding-top: 2rem;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--accent-warm);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .subtitle {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #555;
-  margin: 10px 0;
+  max-width: 780px;
+  font-size: clamp(4.3rem, 10vw, 9rem);
+  font-weight: 900;
+  color: var(--text);
+  line-height: 0.86;
+  margin: 0 0 1.4rem;
+  text-transform: uppercase;
 }
 
 .description {
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 20px 0;
+  max-width: 560px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  margin: 0 0 2rem;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 640px;
+  margin-bottom: 2rem;
+}
+
+.hero-stats div {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.hero-stats strong {
+  display: block;
+  color: var(--text);
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  line-height: 0.9;
+}
+
+.hero-stats span {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .skills-container {
-  margin-top: 20px;
-  height: 50px; /* Fixed height to avoid layout shift */
+  margin: 0;
+  height: 52px;
+  width: min(420px, 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Hide the non-active skills */
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(241, 238, 231, 0.06);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(16px);
 }
 
 .skill {
-  font-size: 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--accent-warm);
   opacity: 0;
   animation: fadeSkill 3s ease-in-out forwards;
 }
@@ -70,9 +206,32 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .title, .subtitle, .description {
-    font-size: calc(1rem + 1.5vw);
+  .home-container {
+    min-height: 92vh;
+    padding-top: 6.5rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    min-height: 500px;
+  }
+
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .subtitle {
+    font-size: 4rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
   }
 }
-
-/* Add additional styling for SkillCarousel component */

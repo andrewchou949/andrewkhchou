@@ -1,174 +1,163 @@
 .education-skills-container {
-    padding: 4rem;
-    background-color: #fff;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: auto;
+  padding: var(--section-y) var(--section-x);
+  color: var(--text);
+  max-width: var(--content-max);
+  margin: auto;
 }
 
 .section-title {
-    font-size: 2.5rem;
-    color: #222;
-    margin-bottom: 1.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+  text-align: left;
 }
 
-.education-section, .skills-section, .volunteering-section {
-    background: #f8f9fa;
-    border-radius: 8px;
-    padding: 2rem;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+.education-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 3rem;
 }
 
-.education-section:hover {
-  transform: rotate(2deg);
+.education-card,
+.skills-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  width: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.education-card:hover,
 .skills-section:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
-.volunteering-section:hover {
-  transform: translateX(10px);
-}
-
-.uni-sub {
-  margin-bottom: 2rem;
-}
-
-.uni-name, .degree-name {
-  margin-bottom: 2px;
+.uni-name {
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 5px;
 }
 
 .degree-name {
-  font-style: italic;
+  color: var(--accent-strong);
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 15px;
 }
 
 .paragraph {
-  padding: 5px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 10px;
+  padding: 0;
 }
 
 .bolded-title {
-  font-weight: bold;
+  color: var(--text);
+  font-weight: 800;
 }
 
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1rem;
+.skill-category-title {
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.skill-category-title:first-child {
+  margin-top: 0;
 }
 
 .skill-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   margin-top: 1rem;
-}
-
-.skill-category-title{
-  font-size: 1.6rem;
-  margin-top: 5px;
 }
 
 .skill-name-icon {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Adjust this value as needed */
-}
-
-.skill-items-list {
-  /* Styles for your list */
-  padding-left: 0; /* Removes default padding if needed */
-  list-style-type: none; /* Removes default list bullet points if desired */
-}
-
-.skill-items-list li {
-  /* Styles for your list items */
-  margin-top: 0.25rem; /* Adds space between list items if desired */
-}
-
-.skill-heading {
-  display: flex;
-  margin-bottom: 0.5rem; /* Space below the skill name and proficiency label */
+  gap: 0.65rem;
+  color: var(--accent-strong);
 }
 
 .skill-name {
-  font-weight: bold;
-  margin-bottom: 0.5rem; /* Space below the skill name */
+  color: var(--text);
+  font-weight: 800;
+}
+
+.skill-proficiency-beginner,
+.skill-proficiency-intermediate,
+.skill-proficiency-advanced {
+  align-self: start;
+  border-radius: 999px;
+  padding: 0.28rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-left: auto;
+  white-space: nowrap;
 }
 
 .skill-proficiency-beginner {
-  align-self: start;
-  background-color: #69b3df; 
-  color: white;
-  border-radius: 12px; /* Rounded corners for the label */
-  padding: 0.25rem 0.75rem; /* Padding inside the label */
-  font-size: 0.875rem; /* Smaller font size for the label */
-  font-weight: bold; /* Bold font for better readability */
-  text-transform: uppercase; /* Uppercase text for stylistic choice */
-  margin-bottom: 0.5rem; /* Space below the proficiency label */
-  margin-left: auto;
+  background-color: rgba(221, 122, 47, 0.12);
+  border: 1px solid rgba(221, 122, 47, 0.28);
+  color: var(--accent-strong);
 }
 
 .skill-proficiency-intermediate {
-  align-self: start;
-  background-color: #3cb5a6; 
-  color: white;
-  border-radius: 12px; /* Rounded corners for the label */
-  padding: 0.25rem 0.75rem; /* Padding inside the label */
-  font-size: 0.875rem; /* Smaller font size for the label */
-  font-weight: bold; /* Bold font for better readability */
-  text-transform: uppercase; /* Uppercase text for stylistic choice */
-  margin-bottom: 0.5rem; /* Space below the proficiency label */
-  margin-left: auto;
+  background-color: rgba(198, 223, 106, 0.12);
+  border: 1px solid rgba(198, 223, 106, 0.28);
+  color: var(--accent-warm);
 }
 
 .skill-proficiency-advanced {
-  align-self: start;
-  background-color: #4caf50; /* Green color for advanced proficiency */
-  color: white;
-  border-radius: 12px; /* Rounded corners for the label */
-  padding: 0.25rem 0.75rem; /* Padding inside the label */
-  font-size: 0.875rem; /* Smaller font size for the label */
-  font-weight: bold; /* Bold font for better readability */
-  text-transform: uppercase; /* Uppercase text for stylistic choice */
-  margin-bottom: 0.5rem; /* Space below the proficiency label */
-  margin-left: auto;
+  background-color: rgba(238, 109, 76, 0.12);
+  border: 1px solid rgba(238, 109, 76, 0.28);
+  color: var(--accent-coral);
 }
 
 .skill-items-list {
-  padding-left: 20px; /* Creates indentation for the list */
-  list-style: inside; /* Positions the bullet points inside the content flow */
-  margin: 5px 0; /* Adjusts spacing around the list */
+  padding-left: 20px;
+  list-style: inside;
+  margin: 5px 0;
 }
 
-
-.event-name {
-  font-style: italic;
+.skill-items-list li {
+  color: var(--text-muted);
+  margin-top: 0.25rem;
 }
 
-.event-location {
-  margin-bottom: 0.5rem;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    .education-skills-container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+  .education-skills-container {
+    padding: var(--section-y) 1.25rem;
+  }
 
-    .section-title {
-        text-align: center;
-    }
+  .education-card,
+  .skills-section {
+    padding: 1.5rem;
+  }
 
-    .education-image, .volunteer-image {
-        margin-top: 1rem;
-    }
+  .skill-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .skill-proficiency-beginner,
+  .skill-proficiency-intermediate,
+  .skill-proficiency-advanced {
+    margin-left: 0;
+  }
 }

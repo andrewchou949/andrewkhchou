@@ -1,6 +1,5 @@
 import React from 'react';
 import './About.css';
-import aboutPic from '../../backgroundImage/aboutpic.png'
 
 const About = () => {
     return (
@@ -29,9 +28,6 @@ const About = () => {
                 Technology never stands still, and neither do I. Whether I’m learning a new framework, experimenting with AI, or 
                 contributing to a project, I’m always looking for ways to grow as a developer and build software that makes a meaningful impact.
                 </p>
-            </div>
-            <div className="about-image">
-                <img src={aboutPic} alt="Andrew" />
             </div>
         </div>
     );

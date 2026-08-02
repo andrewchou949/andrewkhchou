@@ -1,102 +1,67 @@
 .site-header {
   opacity: 0;
-  background-color: transparent;
-  color: #fff;
-  padding: 1rem 0;
-  position: fixed; /* Make the header fixed */
-  width: 100%; /* Ensure the header stretches across the full width */
-  top: 0; /* Stick to the top */
-  left: 0; /* Align to the left */
-  z-index: 1000; /* Ensure it's above other content */
+  color: var(--text);
+  padding: 0.9rem var(--section-x);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(17, 16, 14, 0.72);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 .header-content {
-  max-width: 1200px;
+  max-width: var(--content-max);
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  gap: 1.5rem;
 }
 
 .brand a {
-  color: #000000;
+  color: var(--text);
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .navigation ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
-  padding: 0;
+  gap: 0.4rem;
+  padding: 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(241, 238, 231, 0.05);
 }
 
 .navigation a {
-  color: #000000;
+  color: var(--text-muted);
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.55rem 0.8rem;
   position: relative;
-  transition: color 0.3s;
-}
-
-.navigation a::before,
-.navigation a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: #575757;
-  transition: transform 0.3s;
-}
-
-.navigation a::before {
-  top: 0;
-  left: 0;
-  transform-origin: left;
-  animation: none;
-}
-
-.navigation a::after {
-  bottom: 0;
-  right: 0;
-  transform-origin: right;
-  animation: none;
-}
-
-.navigation a:hover::before,
-.navigation a:hover::after {
-  animation: box-animation 2s linear infinite;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: color 0.2s ease, background 0.2s ease;
 }
 
 .navigation a:hover {
-  color: #000000;
-}
-
-@keyframes box-animation {
-  0%, 100% {
-    width: 0;
-    height: 2px;
-  }
-  25% {
-    width: 100%;
-    height: 2px;
-  }
-  50% {
-    width: 100%;
-    height: 2px;
-    transform: translateY(-100%);
-  }
-  75% {
-    width: 0;
-    height: 2px;
-    transform: translateY(-100%);
-  }
+  background: var(--accent-strong);
+  color: #11100e;
 }
 
 @media (max-width: 768px) {
+  .site-header {
+    padding: 0.85rem 1rem;
+  }
+
   .navigation ul {
-    display: none; /* Hide navigation on smaller screens */
+    display: none;
   }
 }
