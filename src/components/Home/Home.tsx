@@ -53,8 +53,8 @@ const Home = () => {
               <span>UW Graduate</span>
             </div>
             <div>
-              <strong>ATS</strong>
-              <span>Corporate Intern</span>
+              <strong>COSTCO</strong>
+              <span>ATS Intern</span>
             </div>
             <div>
               <strong>EDI</strong>
