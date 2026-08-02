@@ -13,7 +13,7 @@ const Education = () => {
                   <h2 className="uni-name">University of Washington</h2>
                   <h3 className="degree-name">B. Sci. in Computer Science and Software Engineering (CSSE) and Minor in Economics</h3>
                   <p className = "paragraph"><span className="bolded-title">Organizations/Awards:</span> Quarterly and Annually Dean’s Honor List since March 2022</p>
-                  <p className = "paragraph"><span className="bolded-title">Relevant Coursework:</span> Software Engineering; Data Structures, Algorithm and Discrete Maths; Hardware and Computer Organisation; Operating Systems; Databaase Systems; Principle of Human-Computer Interaction</p>
+                  <p className = "paragraph"><span className="bolded-title">Relevant Coursework:</span> Software Engineering; Data Structures, Algorithm and Discrete Maths; Hardware and Computer Organisation; Operating Systems; Database Systems; Principle of Human-Computer Interaction</p>
                 </div>
                 <div className="education-card">
                   <h2 className="uni-name">Shoreline Community College</h2>
