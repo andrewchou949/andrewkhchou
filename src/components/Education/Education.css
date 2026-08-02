@@ -6,11 +6,13 @@
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.4rem, 6vw, 6.2rem);
   color: var(--text);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.6rem;
   padding-left: 0;
   text-align: left;
+  line-height: 0.85;
+  text-transform: uppercase;
 }
 
 .education-section {
@@ -23,34 +25,83 @@
 
 .education-card,
 .skills-section {
-  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: rgba(247, 244, 234, 0.045);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 2rem;
   width: 100%;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: none;
+  transition: border-color 0.24s ease, background 0.24s ease, box-shadow 0.24s ease, backdrop-filter 0.24s ease;
 }
 
-.education-card:hover,
+.education-card:hover {
+  transform: none;
+  box-shadow: none;
+  background: rgba(247, 244, 234, 0.07);
+  border-color: rgba(255, 90, 31, 0.35);
+}
+
+.skills-section::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    linear-gradient(118deg, rgba(255, 255, 255, 0.12), transparent 22%),
+    radial-gradient(ellipse at 50% 0%, rgba(247, 244, 234, 0.1), transparent 38%),
+    linear-gradient(180deg, rgba(87, 227, 255, 0.055), rgba(3, 5, 8, 0));
+  transform: translateY(-8px);
+  transition: opacity 0.26s ease, transform 0.26s ease;
+}
+
 .skills-section:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  transform: none;
+  background:
+    linear-gradient(135deg, rgba(247, 244, 234, 0.12), rgba(247, 244, 234, 0.036)),
+    rgba(3, 5, 8, 0.32);
+  border-color: rgba(247, 244, 234, 0.22);
+  box-shadow:
+    0 32px 100px rgba(0, 0, 0, 0.32),
+    0 0 70px rgba(87, 227, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px) saturate(1.08);
+  -webkit-backdrop-filter: blur(18px) saturate(1.08);
+}
+
+.skills-section:hover::before {
+  opacity: 0.58;
+  transform: translateY(0);
+}
+
+.skill-category {
+  position: relative;
+  z-index: 2;
 }
 
 .uni-name {
+  font-family: var(--display-font);
   color: var(--text);
-  font-size: 1.2rem;
-  font-weight: 800;
-  margin-bottom: 5px;
+  font-size: clamp(1.4rem, 3vw, 2.6rem);
+  font-weight: 950;
+  margin-bottom: 0.45rem;
+  line-height: 0.95;
+  text-transform: uppercase;
 }
 
 .degree-name {
-  color: var(--accent-strong);
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-family: var(--mono-font);
+  color: var(--accent-warm);
+  font-size: 0.94rem;
+  font-weight: 900;
   font-style: normal;
-  margin-bottom: 15px;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .paragraph {
@@ -66,11 +117,14 @@
 }
 
 .skill-category-title {
-  color: var(--text);
-  font-size: 1.25rem;
+  font-family: var(--mono-font);
+  color: var(--accent-strong);
+  font-size: 0.82rem;
   font-weight: 900;
-  margin-top: 1.5rem;
-  margin-bottom: 0.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .skill-category-title:first-child {
@@ -82,19 +136,21 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 0;
+  padding: 0.95rem 0;
+  border-top: 1px solid rgba(247, 244, 234, 0.08);
 }
 
 .skill-name-icon {
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  color: var(--accent-strong);
+  color: var(--electric);
 }
 
 .skill-name {
   color: var(--text);
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .skill-proficiency-beginner,
@@ -102,7 +158,7 @@
 .skill-proficiency-advanced {
   align-self: start;
   border-radius: 999px;
-  padding: 0.28rem 0.75rem;
+  padding: 0.32rem 0.76rem;
   font-size: 0.75rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -111,8 +167,8 @@
 }
 
 .skill-proficiency-beginner {
-  background-color: rgba(221, 122, 47, 0.12);
-  border: 1px solid rgba(221, 122, 47, 0.28);
+  background-color: rgba(255, 90, 31, 0.1);
+  border: 1px solid rgba(255, 90, 31, 0.28);
   color: var(--accent-strong);
 }
 

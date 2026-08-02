@@ -17,12 +17,12 @@ const Header = () => {
     <header className="site-header"  style={{ opacity: isVisible ? 1 : 0, transition: 'opacity 1s ease-in-out' }}>
       <div className="header-content">
         <div className="brand">
-          <a href="/">Andrew's Space</a>
+          <a href="/">Andrew Chou</a>
         </div>
         <nav className="navigation">
           <ul>
-            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#story">Story</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#skill">Skills</a></li>
             <li><a href="#experience">Experience</a></li>

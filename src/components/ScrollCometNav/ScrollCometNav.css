@@ -1,0 +1,170 @@
+.comet-scroll-nav {
+  position: fixed;
+  right: clamp(0.12rem, 0.45vw, 0.45rem);
+  top: 50%;
+  z-index: 920;
+  width: 3rem;
+  height: min(62vh, 560px);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.comet-scroll-track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0.88rem;
+  width: 2px;
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(247, 244, 234, 0.04), rgba(87, 227, 255, 0.26), rgba(216, 255, 79, 0.2), rgba(247, 244, 234, 0.04));
+  box-shadow:
+    0 0 24px rgba(87, 227, 255, 0.18),
+    inset 0 0 10px rgba(247, 244, 234, 0.18);
+  overflow: hidden;
+}
+
+.comet-scroll-track::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--scroll-progress);
+  border-radius: inherit;
+  background:
+    linear-gradient(180deg, rgba(87, 227, 255, 0.2), rgba(247, 244, 234, 0.92), rgba(216, 255, 79, 0.78));
+  box-shadow:
+    0 0 18px rgba(87, 227, 255, 0.55),
+    0 0 28px rgba(216, 255, 79, 0.26);
+}
+
+.comet-scroll-head {
+  position: absolute;
+  right: 0.14rem;
+  top: var(--scroll-progress);
+  width: 2.1rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(247, 244, 234, 0.96), rgba(216, 255, 79, 0.92));
+  box-shadow:
+    0 0 15px rgba(247, 244, 234, 0.54),
+    0 0 24px rgba(87, 227, 255, 0.36);
+  transform: translateY(-50%) rotate(-24deg);
+}
+
+.comet-scroll-head::before,
+.comet-scroll-head::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  border-radius: 999px;
+  transform: translateY(-50%);
+}
+
+.comet-scroll-head::before {
+  right: 0.18rem;
+  width: 0.42rem;
+  height: 0.42rem;
+  background: var(--surface-strong);
+  box-shadow:
+    0 0 14px rgba(247, 244, 234, 0.95),
+    0 0 26px rgba(216, 255, 79, 0.58);
+}
+
+.comet-scroll-head::after {
+  right: 0.88rem;
+  width: 1.3rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(87, 227, 255, 0.7));
+}
+
+.comet-scroll-nodes {
+  position: absolute;
+  inset: 0;
+}
+
+.comet-scroll-node {
+  position: absolute;
+  top: var(--node-progress);
+  right: 0.52rem;
+  width: 0.76rem;
+  height: 0.76rem;
+  border-radius: 50%;
+  border: 1px solid rgba(247, 244, 234, 0.38);
+  background:
+    radial-gradient(circle, rgba(247, 244, 234, 0.95) 0 18%, rgba(87, 227, 255, 0.72) 19% 36%, rgba(3, 5, 8, 0.82) 37% 100%);
+  box-shadow:
+    0 0 14px rgba(87, 227, 255, 0.28),
+    0 0 24px rgba(216, 255, 79, 0.08);
+  transform: translateY(-50%);
+  pointer-events: auto;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.comet-scroll-node::before {
+  content: "";
+  position: absolute;
+  inset: -0.38rem;
+  border-radius: 50%;
+  border: 1px solid rgba(247, 244, 234, 0.08);
+  opacity: 0;
+  transform: scale(0.72);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.comet-scroll-node:hover,
+.comet-scroll-node:focus-visible,
+.comet-scroll-node.is-active {
+  border-color: rgba(216, 255, 79, 0.86);
+  box-shadow:
+    0 0 18px rgba(216, 255, 79, 0.38),
+    0 0 34px rgba(87, 227, 255, 0.28);
+  transform: translateY(-50%) scale(1.16);
+}
+
+.comet-scroll-node:hover::before,
+.comet-scroll-node:focus-visible::before,
+.comet-scroll-node.is-active::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.comet-scroll-label {
+  position: absolute;
+  right: 1.45rem;
+  top: 50%;
+  min-width: max-content;
+  padding: 0.38rem 0.58rem;
+  border: 1px solid rgba(247, 244, 234, 0.18);
+  border-radius: 999px;
+  color: var(--surface-strong);
+  background: rgba(3, 5, 8, 0.72);
+  box-shadow:
+    0 12px 42px rgba(0, 0, 0, 0.34),
+    inset 0 0 14px rgba(87, 227, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  font-family: var(--mono-font);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translate3d(0.45rem, -50%, 0);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  pointer-events: none;
+}
+
+.comet-scroll-node:hover .comet-scroll-label,
+.comet-scroll-node:focus-visible .comet-scroll-label {
+  opacity: 1;
+  transform: translate3d(0, -50%, 0);
+}
+
+@media (max-width: 900px) {
+  .comet-scroll-nav {
+    display: none;
+  }
+}

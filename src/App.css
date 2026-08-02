@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--body-font);
 }
 
 html, body {
@@ -23,11 +23,21 @@ html, body {
 
 .App {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at 10% 8%, rgba(221, 122, 47, 0.18), transparent 26rem),
-    radial-gradient(circle at 85% 18%, rgba(198, 223, 106, 0.12), transparent 24rem),
-    linear-gradient(180deg, #11100e 0%, #171511 42%, #11100e 100%);
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  background: linear-gradient(180deg, #010204 0%, #060b11 46%, #020304 100%);
   color: var(--text);
+}
+
+.App::before {
+  content: "";
+  display: none;
+}
+
+.App::after {
+  content: "";
+  display: none;
 }
 
 .section {
@@ -43,12 +53,34 @@ h2,
 h3,
 h4 {
   color: var(--text);
+  font-family: var(--display-font);
   letter-spacing: 0;
+  text-wrap: balance;
 }
 
 p,
 li {
   color: var(--text-muted);
+}
+
+.App .about-content p,
+.App .mystory-section p,
+.App .education-card p,
+.App .education-card li,
+.App .paragraph,
+.App .skills-section .skill-name,
+.App .skills-section .skill-proficiency-beginner,
+.App .skills-section .skill-proficiency-intermediate,
+.App .skills-section .skill-proficiency-advanced,
+.App .job-card p,
+.App .job-card li,
+.App .project-description,
+.App .contact-description,
+.App .form-group input,
+.App .form-group textarea,
+.App .confirmation-message,
+.App .error-message {
+  font-family: var(--mono-font);
 }
 
 a {
@@ -59,6 +91,587 @@ img {
   max-width: 100%;
 }
 
+.about-container,
+.mystory-container,
+.education-skills-container,
+.job-experience-container,
+.projects-container,
+.contact-section {
+  position: relative;
+  z-index: 2;
+  min-height: 145vh;
+  perspective: 1600px;
+  transform-style: preserve-3d;
+  background: transparent;
+  overflow: visible;
+}
+
+.about-container::before,
+.mystory-container::before,
+.education-skills-container::before,
+.job-experience-container::before,
+.projects-container::before,
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: clamp(5rem, 9vw, 8rem) var(--section-x) auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(216, 255, 79, 0.42), transparent);
+  opacity: 0.68;
+  pointer-events: none;
+}
+
+.about-container::after,
+.mystory-container::after,
+.education-skills-container::after,
+.job-experience-container::after,
+.projects-container::after,
+.contact-section::after {
+  display: none;
+}
+
+.mystory-container::after,
+.education-skills-container::after,
+.job-experience-container::after,
+.projects-container::after {
+  width: 100%;
+  background:
+    radial-gradient(ellipse at 22% 30%, rgba(216, 255, 79, 0.075), transparent 34%),
+    radial-gradient(ellipse at 74% 48%, rgba(87, 227, 255, 0.105), transparent 46%),
+    radial-gradient(ellipse at 34% 78%, rgba(168, 141, 255, 0.08), transparent 42%);
+  border-radius: 50%;
+  box-shadow:
+    0 0 110px rgba(87, 227, 255, 0.08),
+    inset 0 0 80px rgba(216, 255, 79, 0.035);
+  opacity: 0.07;
+  filter: blur(30px);
+  animation: spinePulse 5.8s ease-in-out infinite alternate;
+}
+
+@keyframes spinePulse {
+  from {
+    filter: blur(28px);
+    opacity: 0.06;
+  }
+
+  to {
+    filter: blur(34px);
+    opacity: 0.1;
+  }
+}
+
+@keyframes galaxyDrift {
+  from {
+    transform: scale(1.08) translate3d(-1.5vw, -1vh, 0);
+  }
+
+  to {
+    transform: scale(1.12) translate3d(1.5vw, 1.2vh, 0);
+  }
+}
+
+@keyframes galaxyColumnDrift {
+  from {
+    transform: rotate(-1deg) translate3d(-1vw, -1.5vh, 0);
+  }
+
+  to {
+    transform: rotate(1deg) translate3d(1vw, 1.5vh, 0);
+  }
+}
+
+.about-content p,
+.mystory-section,
+.education-card,
+.skills-section,
+.job-card,
+.project-card,
+.contact-form {
+  --motion-x: 0vw;
+  --motion-y: 0vh;
+  --motion-z: 0px;
+  --motion-rx: 0deg;
+  --motion-ry: 0deg;
+  --motion-rz: 0deg;
+  --motion-scale: 1;
+  --motion-opacity: 1;
+  --motion-blur: 0px;
+  --motion-glow: 0.12;
+  position: relative;
+  background:
+    linear-gradient(135deg, rgba(247, 244, 234, 0.13), rgba(247, 244, 234, 0.026)),
+    rgba(3, 5, 8, 0.34);
+  border: 1px solid rgba(247, 244, 234, 0.16);
+  box-shadow:
+    0 34px 120px rgba(0, 0, 0, 0.38),
+    0 0 90px rgba(87, 227, 255, var(--motion-glow)),
+    inset 0 0 28px rgba(87, 227, 255, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  clip-path: polygon(0 0, calc(100% - 1.2rem) 0, 100% 1.2rem, 100% 100%, 1.2rem 100%, 0 calc(100% - 1.2rem));
+  opacity: var(--motion-opacity);
+  filter: none;
+  transform:
+    translate3d(var(--motion-x), var(--motion-y), var(--motion-z))
+    rotateX(var(--motion-rx))
+    rotateY(var(--motion-ry))
+    rotateZ(var(--motion-rz))
+    scale(var(--motion-scale));
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  contain: paint;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+  will-change: transform, opacity;
+}
+
+.about-content p::after,
+.mystory-section::after,
+.education-card::after,
+.skills-section::after,
+.job-card::after,
+.project-card::after,
+.contact-form::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(247, 244, 234, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(247, 244, 234, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.2;
+  mix-blend-mode: screen;
+}
+
+.section-title,
+.mystory-title,
+.project-title,
+.about-content h1 {
+  --title-x: 0vw;
+  --title-y: 0vh;
+  --title-skew: 0deg;
+  --title-opacity: 1;
+  opacity: var(--title-opacity);
+  font-family: var(--display-font);
+  font-stretch: condensed;
+  transform: translate3d(var(--title-x), var(--title-y), 0) skewX(var(--title-skew));
+  text-shadow:
+    0 0 24px rgba(247, 244, 234, 0.12),
+    0 0 60px rgba(87, 227, 255, 0.08);
+  will-change: transform, opacity;
+}
+
+.App .about-container,
+.App .mystory-container,
+.App .education-skills-container,
+.App .job-experience-container,
+.App .projects-container,
+.App .contact-section {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.App .mystory-content,
+.App .education-section,
+.App .job-experience-list,
+.App .project-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(1.2rem, 3vw, 2.25rem);
+  align-items: start;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  max-width: var(--content-max);
+}
+
+.App .mystory-section,
+.App .education-card,
+.App .job-card,
+.App .project-card {
+  width: 100%;
+  margin: 0;
+  grid-column: span 8;
+}
+
+.App .mystory-section:nth-child(odd),
+.App .education-card:nth-child(odd),
+.App .job-card:nth-child(odd),
+.App .project-card:nth-child(odd) {
+  grid-column: 1 / span 8;
+}
+
+.App .mystory-section:nth-child(even),
+.App .education-card:nth-child(even),
+.App .job-card:nth-child(even),
+.App .project-card:nth-child(even) {
+  grid-column: 5 / span 8;
+}
+
+.App .project-card:nth-child(3n) {
+  grid-column: 3 / span 8;
+}
+
+.App .project-card,
+.App .project-card:nth-child(odd),
+.App .project-card:nth-child(even),
+.App .project-card:nth-child(3n) {
+  grid-column: span 6;
+  max-width: 640px;
+}
+
+.App .project-card:nth-child(odd) {
+  grid-column: 1 / span 6;
+}
+
+.App .project-card:nth-child(even) {
+  grid-column: 7 / span 6;
+}
+
+.App .project-card:nth-child(3n) {
+  grid-column: 4 / span 6;
+}
+
+.App .skills-section {
+  width: min(980px, 100%);
+  margin-left: auto;
+  background:
+    radial-gradient(ellipse at 45% 30%, rgba(87, 227, 255, 0.08), transparent 36%),
+    linear-gradient(135deg, rgba(247, 244, 234, 0.105), rgba(247, 244, 234, 0.035)),
+    rgba(3, 5, 8, 0.46);
+}
+
+.App .about-content {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  clip-path: none;
+}
+
+.App .about-content h1 {
+  grid-row: 1 / span 4;
+}
+
+.App .about-content p,
+.App .mystory-section,
+.App .education-card,
+.App .skills-section,
+.App .job-card,
+.App .project-card,
+.App .contact-form {
+  background:
+    linear-gradient(135deg, rgba(247, 244, 234, 0.105), rgba(247, 244, 234, 0.025)),
+    rgba(3, 5, 8, 0.28);
+  border: 1px solid rgba(247, 244, 234, 0.16);
+  box-shadow:
+    0 34px 120px rgba(0, 0, 0, 0.34),
+    0 0 90px rgba(87, 227, 255, var(--motion-glow)),
+    inset 0 0 28px rgba(87, 227, 255, 0.035);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  clip-path: polygon(0 0, calc(100% - 1.2rem) 0, 100% 1.2rem, 100% 100%, 1.2rem 100%, 0 calc(100% - 1.2rem));
+}
+
+.App .contact-form {
+  transform: translate3d(0, 0, 0) !important;
+  filter: none !important;
+  opacity: 1 !important;
+  pointer-events: auto;
+  z-index: 8;
+  will-change: auto;
+}
+
+.App .contact-form .form-group,
+.App .contact-form label,
+.App .contact-form input,
+.App .contact-form textarea,
+.App .contact-form button {
+  position: relative;
+  z-index: 9;
+  pointer-events: auto;
+}
+
+.App .contact-form::after {
+  z-index: 0;
+  pointer-events: none;
+}
+
+.App .contact-form input,
+.App .contact-form textarea {
+  cursor: text;
+  user-select: text;
+}
+
+.App .project-card {
+  transform: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  pointer-events: auto;
+  transform-style: flat;
+  will-change: auto;
+}
+
+.App .project-card::after {
+  z-index: 0;
+  pointer-events: none;
+}
+
+.App .project-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.App .project-link {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+  transform: none;
+}
+
+.App .project-link:hover {
+  transform: translateY(-1px);
+}
+
+.App .about-content p {
+  grid-column: 2;
+  padding: 1.2rem 1.35rem;
+}
+
+.App [data-motion-mode="signal"],
+.App [data-motion-mode="planet"] {
+  border-color: rgba(247, 244, 234, 0.18);
+  background:
+    radial-gradient(ellipse at 22% 18%, rgba(87, 227, 255, 0.12), transparent 36%),
+    linear-gradient(128deg, rgba(247, 244, 234, 0.12), rgba(247, 244, 234, 0.026)),
+    rgba(3, 5, 8, 0.3);
+  clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 1rem, 100% calc(100% - 0.35rem), calc(100% - 0.35rem) 100%, 1rem 100%, 0 calc(100% - 1rem));
+}
+
+.App [data-motion-mode="spine"],
+.App [data-motion-mode="orbit"] {
+  border-color: rgba(87, 227, 255, 0.2);
+  background:
+    linear-gradient(112deg, rgba(87, 227, 255, 0.11), rgba(247, 244, 234, 0.04) 36%, rgba(3, 5, 8, 0.32)),
+    rgba(3, 5, 8, 0.3);
+  box-shadow:
+    0 44px 140px rgba(0, 0, 0, 0.38),
+    0 0 90px rgba(87, 227, 255, var(--motion-glow)),
+    inset 0 0 38px rgba(87, 227, 255, 0.055);
+  clip-path: polygon(1rem 0, 100% 0, 100% calc(100% - 1rem), calc(100% - 1rem) 100%, 0 100%, 0 1rem);
+}
+
+.App [data-motion-mode="vortex"] {
+  border-color: rgba(168, 141, 255, 0.24);
+  background:
+    conic-gradient(from 40deg at 50% 50%, transparent 0 22%, rgba(87, 227, 255, 0.1) 30%, transparent 42%, rgba(216, 255, 79, 0.08) 58%, transparent 72%),
+    radial-gradient(ellipse at 50% 48%, rgba(168, 141, 255, 0.12), transparent 48%),
+    linear-gradient(132deg, rgba(247, 244, 234, 0.11), rgba(3, 5, 8, 0.36));
+  box-shadow:
+    0 46px 150px rgba(0, 0, 0, 0.44),
+    0 0 90px rgba(168, 141, 255, var(--motion-glow)),
+    inset 0 0 38px rgba(87, 227, 255, 0.045);
+  clip-path: polygon(0.7rem 0, 100% 0, 100% calc(100% - 1.4rem), calc(100% - 1.4rem) 100%, 0 100%, 0 0.7rem);
+}
+
+.App [data-motion-mode="hinge"],
+.App [data-motion-mode="matrix"],
+.App [data-motion-mode="wave"],
+.App [data-motion-mode="bubble"] {
+  border-color: rgba(216, 255, 79, 0.2);
+  background:
+    radial-gradient(ellipse at calc(45% + var(--wave-shift, 0px)) 30%, rgba(87, 227, 255, 0.1), transparent 34%),
+    linear-gradient(90deg, rgba(216, 255, 79, 0.07) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(216, 255, 79, 0.05) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(247, 244, 234, 0.11), rgba(3, 5, 8, 0.34));
+  background-size: 34px 34px, 34px 34px, auto;
+  box-shadow:
+    0 34px 120px rgba(0, 0, 0, 0.36),
+    0 0 90px rgba(216, 255, 79, var(--motion-glow)),
+    inset 0 0 32px rgba(216, 255, 79, 0.035);
+  clip-path: polygon(0 0, calc(100% - 1.6rem) 0, 100% 1.6rem, 100% 100%, 0.35rem 100%, 0 calc(100% - 0.35rem));
+}
+
+.App .skills-section[data-motion-mode="bubble"] {
+  background:
+    radial-gradient(ellipse at 45% 30%, rgba(87, 227, 255, 0.08), transparent 36%),
+    linear-gradient(135deg, rgba(247, 244, 234, 0.105), rgba(247, 244, 234, 0.035)),
+    rgba(3, 5, 8, 0.46);
+}
+
+.App [data-motion-mode="reel"] {
+  border-color: rgba(255, 111, 44, 0.22);
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 111, 44, 0.12), transparent 34%),
+    linear-gradient(132deg, rgba(247, 244, 234, 0.105), rgba(3, 5, 8, 0.36));
+  box-shadow:
+    0 44px 150px rgba(0, 0, 0, 0.42),
+    0 0 90px rgba(255, 111, 44, var(--motion-glow)),
+    inset 0 0 36px rgba(255, 111, 44, 0.04);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1.15rem), calc(100% - 1.15rem) 100%, 0 100%);
+}
+
+.App [data-motion-mode="dock"] {
+  border-color: rgba(247, 244, 234, 0.18);
+  background:
+    linear-gradient(180deg, rgba(247, 244, 234, 0.1), rgba(247, 244, 234, 0.025)),
+    rgba(3, 5, 8, 0.42);
+}
+
+.App [data-motion-mode]::after {
+  opacity: calc(0.12 + var(--motion-glow));
+}
+
+.App [data-motion-mode="spine"]::after,
+.App [data-motion-mode="orbit"]::after,
+.App [data-motion-mode="planet"]::after {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(87, 227, 255, 0.22) 0 1px, transparent 1.5px 9px),
+    linear-gradient(90deg, rgba(247, 244, 234, 0.04) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(247, 244, 234, 0.035) 1px, transparent 1px);
+  background-size: 18px 18px, 32px 32px, 32px 32px;
+}
+
+.App [data-motion-mode="matrix"]::after,
+.App [data-motion-mode="hinge"]::after,
+.App [data-motion-mode="wave"]::after,
+.App [data-motion-mode="bubble"]::after {
+  background:
+    repeating-radial-gradient(circle at 40% calc(38% + var(--wave-shift, 0px)), rgba(197, 239, 255, 0.18) 0 1px, transparent 1px 18px),
+    linear-gradient(120deg, transparent 0 35%, rgba(87, 227, 255, 0.11) 35% 35.5%, transparent 35.5% 68%, rgba(216, 255, 79, 0.1) 68% 68.5%, transparent 68.5%),
+    linear-gradient(132deg, transparent 0 54%, rgba(247, 244, 234, 0.075) 54% 54.45%, transparent 54.45% 100%),
+    linear-gradient(180deg, rgba(247, 244, 234, 0.035) 1px, transparent 1px);
+  background-size: 58px 58px, 100% 100%, 100% 100%, 24px 24px;
+}
+
+.App [data-motion-mode="vortex"]::after {
+  background:
+    radial-gradient(circle at 50% 50%, transparent 0 28%, rgba(168, 141, 255, 0.14) 29% 30%, transparent 31% 100%),
+    radial-gradient(circle at 50% 50%, rgba(87, 227, 255, 0.16) 0 1px, transparent 1.5px 13px),
+    linear-gradient(128deg, transparent 0 42%, rgba(255, 111, 44, 0.12) 42% 42.5%, transparent 42.5%);
+  background-size: 100% 100%, 24px 24px, auto;
+}
+
+.App [data-motion-mode="reel"]::after {
+  background:
+    linear-gradient(128deg, transparent 0 40%, rgba(255, 111, 44, 0.16) 40% 40.5%, transparent 40.5%),
+    linear-gradient(90deg, rgba(247, 244, 234, 0.04) 1px, transparent 1px);
+  background-size: auto, 30px 30px;
+}
+
+.App .about-content p:hover,
+.App .mystory-section:hover,
+.App .education-card:hover,
+.App .skills-section:hover,
+.App .job-card:hover,
+.App .project-card:hover,
+.App .contact-form:hover {
+  background:
+    linear-gradient(135deg, rgba(247, 244, 234, 0.17), rgba(247, 244, 234, 0.04)),
+    rgba(4, 8, 12, 0.48);
+  border-color: rgba(255, 111, 44, 0.5);
+  box-shadow:
+    0 40px 140px rgba(0, 0, 0, 0.46),
+    0 0 80px rgba(255, 111, 44, 0.12),
+    inset 0 0 34px rgba(87, 227, 255, 0.06);
+  transform:
+    translate3d(var(--motion-x), var(--motion-y), var(--motion-z))
+    rotateX(var(--motion-rx))
+    rotateY(var(--motion-ry))
+    rotateZ(var(--motion-rz))
+    scale(calc(var(--motion-scale) + 0.012));
+}
+
+.App .skills-section:hover {
+  background:
+    linear-gradient(135deg, rgba(247, 244, 234, 0.12), rgba(247, 244, 234, 0.036)),
+    rgba(3, 5, 8, 0.32);
+  border-color: rgba(247, 244, 234, 0.22);
+  box-shadow:
+    0 32px 100px rgba(0, 0, 0, 0.32),
+    0 0 70px rgba(87, 227, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform:
+    translate3d(var(--motion-x), var(--motion-y), var(--motion-z))
+    rotateX(var(--motion-rx))
+    rotateY(var(--motion-ry))
+    rotateZ(var(--motion-rz))
+    scale(var(--motion-scale));
+}
+
+.App .mystory-section:hover {
+  padding-left: clamp(4rem, 12vw, 12rem);
+}
+
+.App .job-card:hover {
+  padding-left: clamp(3rem, 7vw, 7rem);
+}
+
+@media (max-width: 768px) {
+  .about-container,
+  .mystory-container,
+  .education-skills-container,
+  .job-experience-container,
+  .projects-container,
+  .contact-section {
+    min-height: auto;
+  }
+
+  .about-container::after,
+  .mystory-container::after,
+  .education-skills-container::after,
+  .job-experience-container::after,
+  .projects-container::after,
+  .contact-section::after {
+    left: 0;
+    width: 100%;
+    opacity: 0.08;
+    filter: blur(18px);
+  }
+
+  .App .mystory-content,
+  .App .education-section,
+  .App .job-experience-list,
+  .App .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .App .mystory-section,
+  .App .education-card,
+  .App .job-card,
+  .App .project-card,
+  .App .mystory-section:nth-child(odd),
+  .App .education-card:nth-child(odd),
+  .App .job-card:nth-child(odd),
+  .App .project-card:nth-child(odd),
+  .App .mystory-section:nth-child(even),
+  .App .education-card:nth-child(even),
+  .App .job-card:nth-child(even),
+  .App .project-card:nth-child(even),
+  .App .project-card:nth-child(3n) {
+    grid-column: 1 / -1;
+  }
+
+  .App .about-content h1,
+  .App .about-content p {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .App .mystory-section:hover {
+    padding-left: 2rem;
+  }
+
+  .App .job-card:hover {
+    padding-left: 1.5rem;
+  }
+}
+
 /* iPhone and major other phones */
 @media only screen and (max-width: 769px) {
   .App {
@@ -66,7 +679,6 @@ img {
   }
 
   .section {
-    /* Apply padding and potentially other styles for smaller screens */
     padding: 20px;
   }
 }
@@ -74,7 +686,6 @@ img {
 /* All the iPads and Computers */
 @media only screen and (min-width: 769px) {
   .App {
-    /* Fixed background for larger screens */
     background-attachment: fixed;
   }
 }

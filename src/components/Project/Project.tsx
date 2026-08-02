@@ -70,16 +70,18 @@ const Project = () => {
                         <span className="project-visual-label">{project.visualLabel}</span>
                         <span className="project-visual-line"></span>
                       </div>
-                      <h2>{project.title}</h2>
-                      <p className="project-description">{project.description}</p>
-                      <ul className="project-tech-list">
-                          {project.skills.map((tech, techIndex) => (
-                              <li className="project-tech-item" key={techIndex}>{tech}</li>
-                          ))}
-                      </ul>
-                      {project.demoLink && (
-                        <a className="project-link" href={project.demoLink} target="_blank" rel="noopener noreferrer">Link</a>
-                      )}
+                      <div className="project-body">
+                        <h2>{project.title}</h2>
+                        <p className="project-description">{project.description}</p>
+                        <ul className="project-tech-list">
+                            {project.skills.map((tech, techIndex) => (
+                                <li className="project-tech-item" key={techIndex}>{tech}</li>
+                            ))}
+                        </ul>
+                        {project.demoLink && (
+                          <a className="project-link" href={project.demoLink} target="_blank" rel="noopener noreferrer">Link</a>
+                        )}
+                      </div>
                   </div>
               ))}
           </div>

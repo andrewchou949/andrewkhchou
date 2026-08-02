@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">AC Space Icon</title>
+  <desc id="desc">Andrew Chou initials set in a glowing space orbit mark.</desc>
+  <defs>
+    <radialGradient id="spaceCore" cx="48%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#18285f"/>
+      <stop offset="44%" stop-color="#07112e"/>
+      <stop offset="100%" stop-color="#02030a"/>
+    </radialGradient>
+    <linearGradient id="orbitBlue" x1="74" y1="148" x2="438" y2="364" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#57e3ff" stop-opacity="0"/>
+      <stop offset="22%" stop-color="#57e3ff"/>
+      <stop offset="64%" stop-color="#f7f4ea"/>
+      <stop offset="100%" stop-color="#d8ff4f" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="letterGlow" x1="142" y1="186" x2="374" y2="322" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="56%" stop-color="#eaf9ff"/>
+      <stop offset="100%" stop-color="#baf6ff"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.34 0 0 0 0 0.89 0 0 0 0 1 0 0 0 0.9 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#02030a"/>
+  <circle cx="256" cy="256" r="214" fill="url(#spaceCore)"/>
+  <path d="M76 301c74 51 245 49 359-48" fill="none" stroke="#02030a" stroke-width="18" stroke-linecap="round" opacity="0.42"/>
+  <ellipse cx="256" cy="256" rx="190" ry="64" transform="rotate(-18 256 256)" fill="none" stroke="url(#orbitBlue)" stroke-width="15" stroke-linecap="round" filter="url(#softGlow)"/>
+  <ellipse cx="256" cy="256" rx="150" ry="45" transform="rotate(18 256 256)" fill="none" stroke="#a88dff" stroke-width="5" stroke-linecap="round" opacity="0.44"/>
+  <circle cx="384" cy="166" r="8" fill="#d8ff4f" filter="url(#softGlow)"/>
+  <circle cx="126" cy="151" r="4" fill="#f7f4ea" opacity="0.82"/>
+  <circle cx="407" cy="343" r="4" fill="#57e3ff" opacity="0.78"/>
+  <circle cx="102" cy="354" r="3" fill="#f7f4ea" opacity="0.62"/>
+  <polyline points="141,322 196,186 252,322" fill="none" stroke="#f7f4ea" stroke-width="33" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="164" y1="272" x2="229" y2="272" stroke="#f7f4ea" stroke-width="27" stroke-linecap="round"/>
+  <ellipse cx="326" cy="270" rx="68" ry="74" transform="rotate(2 326 270)" fill="none" stroke="#f7f4ea" stroke-width="34" stroke-linecap="round" stroke-dasharray="288 184" stroke-dashoffset="78"/>
+</svg>

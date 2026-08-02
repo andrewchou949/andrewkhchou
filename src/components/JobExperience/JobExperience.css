@@ -1,11 +1,13 @@
 /* Section Title */
 .section-title {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.4rem, 6vw, 6.2rem);
     color: var(--text);
     margin-bottom: 1.5rem;
     text-align: left;
     margin-left: 0;
     padding-left: 0;
+    line-height: 0.85;
+    text-transform: uppercase;
   }
   
   /* Job Experience Container */
@@ -20,38 +22,60 @@
   .job-experience-list {
     width: 100%;
     max-width: 1200px;
+    border-top: 1px solid var(--border);
   }
   
   /* Job Card Styling */
   .job-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 2rem;
-    margin-bottom: 1rem;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    padding: 2rem 0 2.2rem clamp(3rem, 7vw, 7rem);
+    margin-bottom: 0;
+    box-shadow: none;
+    transition: background 0.2s ease, padding-left 0.2s ease;
   }
   
   .job-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
+    transform: none;
+    box-shadow: none;
+    background: rgba(247, 244, 234, 0.035);
+    padding-left: clamp(3.4rem, 7.4vw, 7.4rem);
+  }
+
+  .job-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2.2rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 1px solid var(--accent-strong);
+    transform: rotate(45deg);
   }
   
   /* Position Title */
   .job-title {
-    font-size: 1.2rem;
-    font-weight: 800;
-    margin-bottom: 5px;
+    font-family: var(--display-font);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-weight: 950;
+    line-height: 0.96;
+    margin-bottom: 0.55rem;
     color: var(--text);
+    text-transform: uppercase;
   }
   
   /* Company Name */
   .company-name {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--accent-strong);
-    margin-bottom: 15px;
+    font-family: var(--mono-font);
+    font-size: 0.88rem;
+    font-weight: 900;
+    color: var(--accent-warm);
+    margin-bottom: 1rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
   }
   
   /* Duration Styling */
@@ -62,12 +86,23 @@
   
   /* Job Description List */
   .job-card ul {
-    list-style: inside;
-    padding-left: 20px;
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 0.45rem;
   }
   
   .job-card ul li {
     margin-bottom: 5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .job-card ul li::before {
+    content: "+";
+    color: var(--accent-strong);
+    font-weight: 900;
+    margin-right: 0.55rem;
   }
   
   /* Responsive Design */
@@ -84,5 +119,13 @@
     .job-card {
       padding: 1.5rem;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .job-card:hover {
+      padding-left: 1.5rem;
+    }
+
+    .job-card::before {
+      display: none;
     }
   }

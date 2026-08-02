@@ -1,0 +1,195 @@
+.boot-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: linear-gradient(180deg, #010204 0%, #060b11 48%, #020304 100%);
+  color: rgba(247, 244, 234, 0.88);
+  pointer-events: all;
+  opacity: 1;
+  transition: opacity 0.62s ease, visibility 0.62s ease;
+}
+
+.boot-loader-exit {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.boot-loader-field {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 54%, rgba(87, 227, 255, 0.12), transparent 18rem),
+    radial-gradient(circle at 64% 38%, rgba(216, 255, 79, 0.08), transparent 16rem);
+}
+
+.boot-loader-field::before {
+  content: "";
+  position: absolute;
+  inset: -10%;
+  background-image:
+    radial-gradient(circle, rgba(247, 244, 234, 0.72) 0 1px, transparent 1.8px),
+    radial-gradient(circle, rgba(87, 227, 255, 0.54) 0 1px, transparent 1.6px);
+  background-size: 74px 74px, 118px 118px;
+  background-position: 0 0, 34px 28px;
+  opacity: 0.34;
+  animation: bootStarDrift 2.7s ease-in-out infinite alternate;
+}
+
+.boot-star {
+  position: absolute;
+  width: 6rem;
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(247, 244, 234, 0.78), transparent);
+  filter: blur(0.2px);
+  opacity: 0;
+  transform-origin: center;
+  animation: bootShootingStar 1.7s ease-in-out infinite;
+}
+
+.boot-star-one {
+  left: 18%;
+  top: 28%;
+  animation-delay: 0.12s;
+}
+
+.boot-star-two {
+  right: 18%;
+  top: 45%;
+  transform: rotate(-12deg);
+  animation-delay: 0.58s;
+}
+
+.boot-star-three {
+  left: 34%;
+  bottom: 24%;
+  transform: rotate(9deg);
+  animation-delay: 1.02s;
+}
+
+.boot-loader-orbit {
+  position: relative;
+  width: clamp(7.5rem, 18vw, 12rem);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(87, 227, 255, 0.14) 0 14%, rgba(247, 244, 234, 0.06) 15% 16%, transparent 17%),
+    radial-gradient(circle, rgba(216, 255, 79, 0.11), transparent 58%);
+  box-shadow:
+    0 0 60px rgba(87, 227, 255, 0.16),
+    inset 0 0 36px rgba(247, 244, 234, 0.08);
+}
+
+.boot-loader-orbit::before,
+.boot-loader-orbit::after,
+.boot-loader-orbit span {
+  content: "";
+  position: absolute;
+  inset: 10%;
+  border: 1px solid rgba(87, 227, 255, 0.54);
+  border-radius: 50%;
+  transform: rotate(14deg) scaleX(0.72);
+  animation: bootOrbit 1.8s linear infinite;
+}
+
+.boot-loader-orbit::after {
+  inset: 18%;
+  border-color: rgba(247, 244, 234, 0.44);
+  transform: rotate(-24deg) scaleX(0.78);
+  animation-duration: 2.25s;
+  animation-direction: reverse;
+}
+
+.boot-loader-orbit span:nth-child(1) {
+  inset: 6%;
+  border-color: rgba(216, 255, 79, 0.36);
+  transform: rotate(74deg) scaleX(0.52);
+  animation-duration: 2.6s;
+}
+
+.boot-loader-orbit span:nth-child(2),
+.boot-loader-orbit span:nth-child(3) {
+  width: 0.48rem;
+  height: 0.48rem;
+  inset: auto;
+  border: 0;
+  background: rgba(247, 244, 234, 0.92);
+  box-shadow: 0 0 22px rgba(216, 255, 79, 0.62);
+}
+
+.boot-loader-orbit span:nth-child(2) {
+  animation: bootDotA 1.8s linear infinite;
+}
+
+.boot-loader-orbit span:nth-child(3) {
+  animation: bootDotB 2.25s linear infinite;
+}
+
+.boot-loader-label {
+  position: absolute;
+  top: calc(50% + clamp(5.8rem, 13vw, 8rem));
+  font-family: var(--display-font);
+  font-size: clamp(0.72rem, 1.2vw, 0.9rem);
+  font-weight: 950;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 234, 0.72);
+  text-shadow: 0 0 18px rgba(87, 227, 255, 0.32);
+}
+
+@keyframes bootOrbit {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes bootDotA {
+  from {
+    transform: rotate(0deg) translateX(clamp(3.2rem, 7.4vw, 5.1rem));
+  }
+
+  to {
+    transform: rotate(360deg) translateX(clamp(3.2rem, 7.4vw, 5.1rem));
+  }
+}
+
+@keyframes bootDotB {
+  from {
+    transform: rotate(160deg) translateX(clamp(2.7rem, 6vw, 4.2rem));
+  }
+
+  to {
+    transform: rotate(-200deg) translateX(clamp(2.7rem, 6vw, 4.2rem));
+  }
+}
+
+@keyframes bootShootingStar {
+  0% {
+    opacity: 0;
+    translate: -2.2rem 1.4rem;
+  }
+
+  24% {
+    opacity: 0.64;
+  }
+
+  100% {
+    opacity: 0;
+    translate: 3.4rem -1.8rem;
+  }
+}
+
+@keyframes bootStarDrift {
+  from {
+    transform: translate3d(-0.5rem, -0.2rem, 0);
+  }
+
+  to {
+    transform: translate3d(0.5rem, 0.35rem, 0);
+  }
+}

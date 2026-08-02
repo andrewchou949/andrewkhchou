@@ -9,12 +9,18 @@ import Education from './components/Education/Education';
 import JobExperience from './components/JobExperience/JobExperience';
 import Project from './components/Project/Project';
 import Contact from './components/Contact/Contact';
+import MotionDirector from './components/MotionDirector/MotionDirector';
+import BootLoader from './components/BootLoader/BootLoader';
+import ScrollCometNav from './components/ScrollCometNav/ScrollCometNav';
 
 function App() {
 
   return (
     <div className="App">
+          <BootLoader />
+          <MotionDirector />
           <Header />
+          <ScrollCometNav />
           <Home/>
           <About />
           <MyStory />

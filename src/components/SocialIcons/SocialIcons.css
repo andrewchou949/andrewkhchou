@@ -15,7 +15,7 @@
   width: 2.4rem;
   height: 2.4rem;
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.72);
   box-shadow: 0 6px 18px rgba(16, 24, 40, 0.08);
   transition: color 0.2s ease, transform 0.2s ease, border 0.2s ease;
@@ -42,9 +42,9 @@
 }
 
 .profile-card .social-icons a {
-  color: #11100e;
-  background: rgba(17, 16, 14, 0.05);
-  border-color: rgba(17, 16, 14, 0.14);
+  color: #030406;
+  background: rgba(3, 4, 6, 0.05);
+  border-color: rgba(3, 4, 6, 0.14);
   box-shadow: none;
 }
 

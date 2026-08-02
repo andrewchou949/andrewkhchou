@@ -1,11 +1,15 @@
 import React from 'react';
 import './About.css';
+import aboutPhoto from '../../backgroundImage/aboutpic.png';
 
 const About = () => {
     return (
         <div id="about" className="about-container">
             <div className="about-content">
                 <h1>About</h1>
+                <figure className="about-photo-bubble" aria-label="Portrait of Kimhour Chou">
+                    <img src={aboutPhoto} alt="Kimhour Chou at the University of Washington" />
+                </figure>
                 <p>
                 Hello! I’m Andrew, an EDI System Admin with a Bachelor of Science in Computer Science and Software Engineering (CSSE) 
                 from the University of Washington, along with a minor in Economics. Ever since writing my first “Hello, World!” 

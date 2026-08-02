@@ -3,7 +3,7 @@ import './MyStory.css';
 
 const MyStory = () => {
     return (
-        <div className="mystory-container">
+        <div id="story" className="mystory-container">
             <h1 className="mystory-title">My Story</h1>
             <div className="mystory-content">
                 <div className="mystory-section">
