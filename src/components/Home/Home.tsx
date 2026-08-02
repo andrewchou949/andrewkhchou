@@ -54,7 +54,7 @@ const Home = () => {
             </div>
             <div>
               <strong>ATS</strong>
-              <span>Corporate Tech</span>
+              <span>Corporate Intern</span>
             </div>
             <div>
               <strong>EDI</strong>
